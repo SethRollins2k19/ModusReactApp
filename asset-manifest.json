@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ModusReactApp/static/css/main.b1179ee9.chunk.css",
+    "main.css": "/ModusReactApp/static/css/main.5d3e3e82.chunk.css",
     "main.js": "/ModusReactApp/static/js/main.5fecdf2f.chunk.js",
     "main.js.map": "/ModusReactApp/static/js/main.5fecdf2f.chunk.js.map",
     "runtime-main.js": "/ModusReactApp/static/js/runtime-main.926c327c.js",
@@ -8,16 +8,16 @@
     "static/js/2.51663d1f.chunk.js": "/ModusReactApp/static/js/2.51663d1f.chunk.js",
     "static/js/2.51663d1f.chunk.js.map": "/ModusReactApp/static/js/2.51663d1f.chunk.js.map",
     "index.html": "/ModusReactApp/index.html",
-    "precache-manifest.e7e0772b372c0e0c2f7476320936dd83.js": "/ModusReactApp/precache-manifest.e7e0772b372c0e0c2f7476320936dd83.js",
+    "precache-manifest.3d0b754bdd4bb745711a64fd652e4129.js": "/ModusReactApp/precache-manifest.3d0b754bdd4bb745711a64fd652e4129.js",
     "service-worker.js": "/ModusReactApp/service-worker.js",
-    "static/css/main.b1179ee9.chunk.css.map": "/ModusReactApp/static/css/main.b1179ee9.chunk.css.map",
+    "static/css/main.5d3e3e82.chunk.css.map": "/ModusReactApp/static/css/main.5d3e3e82.chunk.css.map",
     "static/js/2.51663d1f.chunk.js.LICENSE": "/ModusReactApp/static/js/2.51663d1f.chunk.js.LICENSE",
     "static/media/logo.svg": "/ModusReactApp/static/media/logo.38e729eb.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.926c327c.js",
     "static/js/2.51663d1f.chunk.js",
-    "static/css/main.b1179ee9.chunk.css",
+    "static/css/main.5d3e3e82.chunk.css",
     "static/js/main.5fecdf2f.chunk.js"
   ]
 }
