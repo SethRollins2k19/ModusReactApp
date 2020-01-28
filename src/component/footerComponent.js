@@ -13,7 +13,7 @@ export default class FooterComponent extends React.Component{
                 <MainContainerComponent>
                     <section className={'footer__inner'}>
                         <FooterItem className={'footer__item'}>
-                            <Logo className={'lol'}/>
+                            <Logo/>
                             <div className={'footer__description'}>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</div>
                         </FooterItem>
                         <FooterItem>
