@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ModusReactApp/static/css/main.d61e0cb9.chunk.css",
+    "main.css": "/ModusReactApp/static/css/main.b84b6743.chunk.css",
     "main.js": "/ModusReactApp/static/js/main.d02fdfdd.chunk.js",
     "main.js.map": "/ModusReactApp/static/js/main.d02fdfdd.chunk.js.map",
     "runtime-main.js": "/ModusReactApp/static/js/runtime-main.926c327c.js",
@@ -9,10 +9,10 @@
     "static/js/2.8309781f.chunk.js": "/ModusReactApp/static/js/2.8309781f.chunk.js",
     "static/js/2.8309781f.chunk.js.map": "/ModusReactApp/static/js/2.8309781f.chunk.js.map",
     "index.html": "/ModusReactApp/index.html",
-    "precache-manifest.e7ed835650ea06d991a2c0e687ac0db2.js": "/ModusReactApp/precache-manifest.e7ed835650ea06d991a2c0e687ac0db2.js",
+    "precache-manifest.570fefad33b25b2dc344d68b86aec5e0.js": "/ModusReactApp/precache-manifest.570fefad33b25b2dc344d68b86aec5e0.js",
     "service-worker.js": "/ModusReactApp/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/ModusReactApp/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.d61e0cb9.chunk.css.map": "/ModusReactApp/static/css/main.d61e0cb9.chunk.css.map",
+    "static/css/main.b84b6743.chunk.css.map": "/ModusReactApp/static/css/main.b84b6743.chunk.css.map",
     "static/js/2.8309781f.chunk.js.LICENSE": "/ModusReactApp/static/js/2.8309781f.chunk.js.LICENSE",
     "static/media/keyboard-backspace.svg": "/ModusReactApp/static/media/keyboard-backspace.e198230b.svg",
     "static/media/logo.svg": "/ModusReactApp/static/media/logo.38e729eb.svg"
@@ -21,7 +21,7 @@
     "static/js/runtime-main.926c327c.js",
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.8309781f.chunk.js",
-    "static/css/main.d61e0cb9.chunk.css",
+    "static/css/main.b84b6743.chunk.css",
     "static/js/main.d02fdfdd.chunk.js"
   ]
 }
