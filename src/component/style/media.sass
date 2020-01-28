@@ -1,0 +1,117 @@
+@media (max-width: 1100px)
+  //header media queries
+  .header__inner
+    .nav__menu
+      grid-template-columns: repeat(auto-fit,minmax(45px, 1fr)) !important
+  //footer
+
+  .footer__description
+    font-size: 10px
+    line-height: 14px
+  .footer__title
+    font-size: 8px
+  .footer__link
+    font-size: 10px
+    margin-top: 5px
+
+
+
+@media (max-width: 900px)
+  //header media queries
+  .header__inner
+    padding-bottom: 70px
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    position: relative
+    .logo
+      position: absolute
+      left: 50%
+      transform: translateX(-50%)
+      img
+        width: 150px
+
+    .nav
+      transition: right .3s linear
+      padding: 0
+      background: #eeeeee
+      height: 100%
+      position: fixed
+      right: -200px
+      width: 100%
+      max-width: 200px
+      justify-content: flex-start
+      display: flex
+      flex-direction: column
+      align-items: center
+      .nav__personalAccount
+        cursor: pointer
+        transition: background-color .6s linear
+        &:hover
+          background: #BC9CFF
+        .account
+          margin: 0px
+          border: none
+          padding: 0
+          width: 100%
+          height: 100%
+          &:hover .account__link
+            font-weight: normal
+            color: white
+            text-shadow: none
+          .account__link
+            padding: 0
+            transition: color .6s linear
+      .nav__personalAccount:hover .account__link
+        font-weight: normal
+        color: white
+      .nav__menu
+        width: 100%
+        margin-top: 45px
+        display: flex
+        flex-direction: column
+        .nav__link
+          display: block
+          padding: 10px 0
+          width: 100%
+          text-align: center
+          border-top: 2px solid #BC9CFF
+          border: 2px solid #BC9CFF
+          border-bottom: none
+          transition: background .6s linear
+          &:hover
+            background: #BC9CFF
+            color: white
+      .nav__personalAccount
+        width: 100%
+        border: 2px solid #BC9CFF
+        padding: 10px 0
+        margin: 0
+        display: flex
+        justify-content: center
+        align-items: center
+    .nav--opened
+      right: 0
+    .nav--logined
+      flex-direction: column-reverse
+      justify-content: flex-end
+      .nav__menu
+        margin-top: 0
+      .nav__personalAccount
+        margin-top: 45px
+        border-bottom: none
+      .nav__link:last-of-type
+        border-bottom: 2px solid #BC9CFF
+    .hamburgerMenu
+      display: block
+      position: fixed
+      right: 0
+      top: 17px
+    .hamburgerMenu__inner
+      display: flex
+
+  //btn media
+  .btn
+    font-size: 10px
+    padding: 6px 16px
+
