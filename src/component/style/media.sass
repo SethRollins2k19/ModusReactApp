@@ -3,16 +3,7 @@
   .header__inner
     .nav__menu
       grid-template-columns: repeat(auto-fit,minmax(45px, 1fr)) !important
-  //footer
 
-  .footer__description
-    font-size: 10px
-    line-height: 14px
-  .footer__title
-    font-size: 8px
-  .footer__link
-    font-size: 10px
-    margin-top: 5px
 
 
 
@@ -109,9 +100,45 @@
       top: 17px
     .hamburgerMenu__inner
       display: flex
-
   //btn media
   .btn
     font-size: 10px
     padding: 6px 16px
+  //footer
+  .footer__inner
+    grid-template-columns: repeat(4,1fr)
+  .footer__item:last-of-type
+
+    grid-column-start: 1
+    grid-column-end: 5
+    display: flex
+    justify-content: center
+  .footer__subscribe
+    padding: 20px
+    border: 2px solid #BC9CFF
+    border-radius: 12px
+    max-width: 280px
+  .footer__item .logo
+    width: 100px
+  .footer__description
+    font-size: 10px
+    line-height: 14px
+  .footer__title
+    font-size: 8px
+  .footer__link
+    font-size: 10px
+    margin-top: 5px
+  .footer__input
+    padding: 2px 10px
+
+
+@media (max-width: 350px)
+  .footer__item .logo
+    width: 80px
+  .footer__description:not(:first-of-type)
+    font-size: 8px
+    line-height: 14px
+  .footer__link
+    font-size: 8px
+    margin-top: 2px
 
