@@ -5,9 +5,9 @@ import './component/style/mainStyle.sass'
 
 //components
 //--header
-import HeaderComponent from "./component/headerComponent";
+import HeaderComponent from "./component/HeaderComponent";
 //--footer
-import FooterComponent from "./component/footerComponent";
+import FooterComponent from "./component/FooterComponent";
 
 //media style
 import './component/style/media.sass'

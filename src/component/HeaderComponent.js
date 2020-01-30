@@ -1,8 +1,8 @@
 import React from 'react'
-import MainContainerComponent from "../containers/mainContainer"
+import MainContainerComponent from "./containers/MainContainer"
 import './style/headerStyle.sass'
-import Logo from "./logoComponent";
-import Btn from "./btnComponent";
+import Logo from "./UI/LogoComponent";
+import Btn from "./UI/BtnComponent";
 export default class HeaderComponent extends React.Component{
     constructor(props){
         super(props)

@@ -1,10 +1,11 @@
 import React from 'react'
 import './style/footerStyle.sass'
-import Logo from "./logoComponent"
-import MainContainerComponent from "../containers/mainContainer"
+import Logo from "./UI/LogoComponent"
+import MainContainerComponent from "./containers/MainContainer"
 import enterArrow from '../assets/keyboard-backspace.svg'
-
-
+import Twitter from '../assets/twitter.svg'
+import FaceBook from '../assets/facebook.svg'
+import Instagram from '../assets/instagram.svg'
 
 export default class FooterComponent extends React.Component{
     render() {
@@ -17,21 +18,21 @@ export default class FooterComponent extends React.Component{
                             <div className={'footer__description'}>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</div>
                         </FooterItem>
                         <FooterItem>
-                            <FooterList title={'Navigation'} items={['About Us','News','Support','Products']}></FooterList>
+                            <FooterList title={'Navigation'} items={['About Us','News','Support','Products']} />
                         </FooterItem>
                         <FooterItem>
-                            <FooterList title={'About us'} items={['Who we are','Our team','Careers','Investors']}></FooterList>
+                            <FooterList title={'About us'} items={['Who we are','Our team','Careers','Investors']} />
 
                         </FooterItem>
                         <FooterItem>
-                            <FooterList title={'Support'} items={['Documentation','Community','Get in Touch']}></FooterList>
+                            <FooterList title={'Support'} items={['Documentation','Community','Get in Touch']} />
                         </FooterItem>
                         <FooterItem>
-                            <Subscribe/>
+                            <Subscribe />
                         </FooterItem>
 
                     </section>
-                    <CopyRight/>
+                    <CopyRight />
                 </MainContainerComponent>
             </div>
         );
@@ -40,14 +41,8 @@ export default class FooterComponent extends React.Component{
 
 
 
-function CopyRight() {
-    return (
-        <section className={'footer__copyright'}>
 
-        </section>
-    )
-}
-
+//top footer
 
 function FooterItem(props){
     return(
@@ -80,3 +75,44 @@ function Subscribe() {
         </article>
     )
 }
+
+// /top footer
+
+// copyright
+
+
+function CopyRight() {
+    return (
+        <section className={'footer__copyright'}>
+            <div className={'footer__description'}>Copyright © 2018 Toxin UI Kit. All rights reserved.</div>
+            <Social items={[Twitter,FaceBook,Instagram]} alt={["twitter","facebook","instagram"]}/>
+        </section>
+    )
+}
+
+function Social(props) {
+    return (
+        <div className={'social'}>
+            {props.items.map((item,key)=>{
+               return (
+                   <a className={'social-icon'} key={key}>
+                       <img src={item} alt={function (){
+                           try {
+                               return props.alt[key] != undefined ? props.alt[key] : "icon";
+                           } catch (e) {
+                               return "icon"
+                           }
+                       }()}/>
+                   </a>
+                   )
+            })}
+        </div>
+    )
+}
+
+
+// /copyright
+
+
+
+
