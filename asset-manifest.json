@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ModusReactApp/static/css/main.8f719637.chunk.css",
-    "main.js": "/ModusReactApp/static/js/main.48111347.chunk.js",
-    "main.js.map": "/ModusReactApp/static/js/main.48111347.chunk.js.map",
+    "main.css": "/ModusReactApp/static/css/main.1e9ea48d.chunk.css",
+    "main.js": "/ModusReactApp/static/js/main.fed63273.chunk.js",
+    "main.js.map": "/ModusReactApp/static/js/main.fed63273.chunk.js.map",
     "runtime-main.js": "/ModusReactApp/static/js/runtime-main.926c327c.js",
     "runtime-main.js.map": "/ModusReactApp/static/js/runtime-main.926c327c.js.map",
     "static/css/2.764ccc25.chunk.css": "/ModusReactApp/static/css/2.764ccc25.chunk.css",
-    "static/js/2.8844bce0.chunk.js": "/ModusReactApp/static/js/2.8844bce0.chunk.js",
-    "static/js/2.8844bce0.chunk.js.map": "/ModusReactApp/static/js/2.8844bce0.chunk.js.map",
+    "static/js/2.3bb38294.chunk.js": "/ModusReactApp/static/js/2.3bb38294.chunk.js",
+    "static/js/2.3bb38294.chunk.js.map": "/ModusReactApp/static/js/2.3bb38294.chunk.js.map",
     "index.html": "/ModusReactApp/index.html",
-    "precache-manifest.94604b1d059d83f1078b0205d3f46eab.js": "/ModusReactApp/precache-manifest.94604b1d059d83f1078b0205d3f46eab.js",
+    "precache-manifest.a740322ee3ccc710e12534795ebfbb52.js": "/ModusReactApp/precache-manifest.a740322ee3ccc710e12534795ebfbb52.js",
     "service-worker.js": "/ModusReactApp/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/ModusReactApp/static/css/2.764ccc25.chunk.css.map",
-    "static/css/main.8f719637.chunk.css.map": "/ModusReactApp/static/css/main.8f719637.chunk.css.map",
-    "static/js/2.8844bce0.chunk.js.LICENSE": "/ModusReactApp/static/js/2.8844bce0.chunk.js.LICENSE",
+    "static/css/main.1e9ea48d.chunk.css.map": "/ModusReactApp/static/css/main.1e9ea48d.chunk.css.map",
+    "static/js/2.3bb38294.chunk.js.LICENSE": "/ModusReactApp/static/js/2.3bb38294.chunk.js.LICENSE",
     "static/media/facebook.svg": "/ModusReactApp/static/media/facebook.6b1abf02.svg",
     "static/media/instagram.svg": "/ModusReactApp/static/media/instagram.104bbadd.svg",
     "static/media/keyboard-backspace.svg": "/ModusReactApp/static/media/keyboard-backspace.e198230b.svg",
@@ -23,8 +23,8 @@
   "entrypoints": [
     "static/js/runtime-main.926c327c.js",
     "static/css/2.764ccc25.chunk.css",
-    "static/js/2.8844bce0.chunk.js",
-    "static/css/main.8f719637.chunk.css",
-    "static/js/main.48111347.chunk.js"
+    "static/js/2.3bb38294.chunk.js",
+    "static/css/main.1e9ea48d.chunk.css",
+    "static/js/main.fed63273.chunk.js"
   ]
 }
