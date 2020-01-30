@@ -10,7 +10,7 @@ import Instagram from '../assets/instagram.svg'
 export default class FooterComponent extends React.Component{
     render() {
         return (
-            <div className={'footer'}>
+            <footer className={'footer'}>
                 <MainContainerComponent>
                     <section className={'footer__inner'}>
                         <FooterItem className={'footer__item'}>
@@ -32,9 +32,11 @@ export default class FooterComponent extends React.Component{
                         </FooterItem>
 
                     </section>
-                    <CopyRight />
+                    <CopyRight items={[Twitter,FaceBook,Instagram]}
+                               alt={["twitter","facebook","instagram"]}
+                               link={['#','#','#']} />
                 </MainContainerComponent>
-            </div>
+            </footer>
         );
     }
 }
@@ -81,35 +83,36 @@ function Subscribe() {
 // copyright
 
 
-function CopyRight() {
+function CopyRight(props) {
     return (
         <section className={'footer__copyright'}>
             <div className={'footer__description'}>Copyright © 2018 Toxin UI Kit. All rights reserved.</div>
-            <Social items={[Twitter,FaceBook,Instagram]} alt={["twitter","facebook","instagram"]}/>
+            <Social  items={props.items} alt={props.alt} link={props.link} />
         </section>
     )
 }
 
 function Social(props) {
+
     return (
         <div className={'social'}>
             {props.items.map((item,key)=>{
                return (
-                   <a className={'social-icon'} key={key}>
-                       <img src={item} alt={function (){
-                           try {
-                               return props.alt[key] != undefined ? props.alt[key] : "icon";
-                           } catch (e) {
-                               return "icon"
-                           }
-                       }()}/>
+                   <a className={'social-icon'} key={key} href={props.link[key]}>
+                       <img src={item} alt={props.alt[key]}/>
                    </a>
                    )
             })}
         </div>
     )
 }
-
+// function ifHas (item = undefined, defaultName){
+//     try {
+//         return (item !== undefined ? item : defaultName )
+//     } catch (e) {
+//         return (defaultName)
+//     }
+// }
 
 // /copyright
 

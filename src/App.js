@@ -11,16 +11,18 @@ import FooterComponent from "./component/FooterComponent";
 
 //media style
 import './component/style/media.sass'
+import HomePage from "./pages/HomePage";
 
 
 
 export default class App extends React.Component{
     render(){
         return(
-            <div>
+            <>
                 <HeaderComponent links={['Home','About Us','Services','Careers','News','Documentation']}/>
+                <HomePage/>
                 <FooterComponent/>
-            </div>
+            </>
         )
     }
 }
