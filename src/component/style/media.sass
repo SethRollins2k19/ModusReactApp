@@ -42,18 +42,19 @@
         &:hover
           background: #BC9CFF
         .account
-          margin: 0px
+          margin: 0
           border: none
           padding: 0
           width: 100%
           height: 100%
+          .account__link
+            padding: 0
+            transition: color .6s linear
           &:hover .account__link
             font-weight: normal
             color: white
             text-shadow: none
-          .account__link
-            padding: 0
-            transition: color .6s linear
+
       .nav__personalAccount:hover .account__link
         font-weight: normal
         color: white
@@ -67,7 +68,6 @@
           padding: 10px 0
           width: 100%
           text-align: center
-          border-top: 2px solid #BC9CFF
           border: 2px solid #BC9CFF
           border-bottom: none
           transition: background .6s linear
@@ -132,9 +132,6 @@
     margin-top: 5px
   .footer__input
     padding: 2px 10px
-  .footer__label
-    right: -5px
-
 
 
 @media (max-width: 350px)
