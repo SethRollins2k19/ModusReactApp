@@ -4,6 +4,7 @@ import './component/style/mainStyle.sass'
 
 
 //components
+import HomePage from "./pages/HomePage"
 //--header
 import HeaderComponent from "./component/HeaderComponent";
 //--footer
@@ -11,7 +12,7 @@ import FooterComponent from "./component/FooterComponent";
 
 //media style
 import './component/style/media.sass'
-import HomePage from "./pages/HomePage";
+
 
 
 

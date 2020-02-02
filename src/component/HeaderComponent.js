@@ -8,7 +8,7 @@ export default class HeaderComponent extends React.Component{
         super(props)
         this.props = props
         this.state = {
-            isLogin: true,
+            isLogin: false,
             userName: 'None'
         }
     }

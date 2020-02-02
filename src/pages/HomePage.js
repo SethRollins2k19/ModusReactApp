@@ -1,7 +1,7 @@
 import React from "react"
 import MainContainerComponent from "../component/containers/MainContainer";
 import RoomSearch from "../component/UI/RoomSearch";
-import DatePickerComponent from "../component/UI/DatePickerComponent";
+import '../component/style/homePage.sass'
 
 export default class HomePage extends React.Component{
     render() {
@@ -9,7 +9,6 @@ export default class HomePage extends React.Component{
             <div className={'home-page'}>
                 <MainContainerComponent>
                     <RoomSearch />
-                    <DatePickerComponent />
                 </MainContainerComponent>
             </div>
         );
