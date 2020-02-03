@@ -12,7 +12,7 @@ export default class DatePickerComponent extends React.Component{
         super(props)
         this.state = {
             startDate: new Date(),
-            endDate: '',
+            endDate: new Date( new Date().getTime() + (24 * 60 * 60 * 1000)),
             seed: Math.floor(Math.random()*10000)
         }
     }
@@ -51,7 +51,7 @@ export default class DatePickerComponent extends React.Component{
                     selectsEnd
                     startDate={this.state.startDate}
                     endDate={this.state.endDate}
-                    minDate={this.state.startDate}
+                    minDate={this.state.endDate}
                 />
                 </div>
                 </div>

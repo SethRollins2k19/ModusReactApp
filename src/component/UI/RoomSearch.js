@@ -3,6 +3,7 @@ import FormContainer from "../containers/FormContainer"
 import BtnComponent from "./BtnComponent"
 import '../style/searchRoomStyle.sass'
 import DatePickerComponent from "./DatePickerComponent";
+import GuestsComponent from "./GuestsComponent";
 
 export default function RoomSearch (props){
     return (
@@ -10,14 +11,15 @@ export default function RoomSearch (props){
             <form>
                 <DatePickerComponent multi={true} classNameAdd={'datepicker--room-search'} title={['Arrived','Shipped']}  />
                 <label htmlFor="guests" className={'datepicker__label datepicker__label--guests'}>Guests</label>
-                <select name="" id="guests" defaultValue="DEFAULT" >
-                    <option  value="DEFAULT" disabled className={'guests__placeholder'}>Choose the value of guests</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="3">4</option>
-                    <option value="4">5</option>
-                </select>
+                {/*<select name="" id="guests" defaultValue="DEFAULT" >*/}
+                {/*    <option  value="DEFAULT" disabled className={'guests__placeholder'}>Choose the value of guests</option>*/}
+                {/*    <option value="1">1</option>*/}
+                {/*    <option value="2">2</option>*/}
+                {/*    <option value="3">3</option>*/}
+                {/*    <option value="3">4</option>*/}
+                {/*    <option value="4">5</option>*/}
+                {/*</select>*/}
+                <GuestsComponent/>
                 <div className={'btn--find-room'}>
                     <BtnComponent title={'Find room'} />
                 </div>
