@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import MainContainerComponent from "./containers/MainContainer"
 import './style/headerStyle.sass'
 import Logo from "./UI/LogoComponent";
@@ -18,7 +19,7 @@ export default class HeaderComponent extends React.Component{
                 <MainContainerComponent>
                    <header className="header__inner">
                         <Logo/>
-                       <NavComponent linksArr={this.props.links} isLogin={this.state.isLogin}>
+                       <NavComponent locate={['/']} linksArr={this.props.links} isLogin={this.state.isLogin}>
                            {this.state.isLogin === false ? <div className={'btnBlock'}>
                                <Btn title={'login'}/>
                                <Btn title={'register'}/>
@@ -35,7 +36,7 @@ export default class HeaderComponent extends React.Component{
 }
 
 function NavComponent(props) {
-    const links = props.linksArr.map((link,keys)=><LinkComponent key={keys} linkTitle={link}/>)
+    const links = props.linksArr.map((link,keys)=><LinkComponent locate={props.locate[keys]} key={keys} linkTitle={link}/>)
     return (
         <nav className={`nav ${props.isLogin === true ? 'nav--logined' : ''}`} >
             <section className={'nav__menu'}>{links}</section>
@@ -44,10 +45,15 @@ function NavComponent(props) {
     )
 }
 
-function LinkComponent(props){
-    return (
-        <a href={"#lover"} className={'nav__link'}>{props.linkTitle}</a>
-    )
+class LinkComponent extends React.Component{
+    static defaultProps = {
+        locale: ''
+    }
+    render() {
+        return (
+            <Link to={this.props.locate} className={'nav__link'}>{this.props.linkTitle}</Link>
+        )
+    }
 }
 function HamburgerMenu (props) {
     function handelClick(){
