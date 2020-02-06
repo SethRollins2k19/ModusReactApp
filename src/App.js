@@ -13,8 +13,13 @@ import HeaderComponent from "./component/HeaderComponent";
 //--footer
 import FooterComponent from "./component/FooterComponent";
 
+
+//assistant unit
+import {_} from "./util/util";
+
 //media style
 import './component/style/media.sass'
+
 
 
 
@@ -26,8 +31,8 @@ export default class App extends React.Component{
             <BrowserRouter>
                 <HeaderComponent links={['Home','About Us','Services','Careers','News','Documentation']}/>
                 <Switch>
-                    <Route exact path='/' component={HomePage}/>
-                    <Route exact path='/Room' component={RoomPage}/>
+                    <Route exact path={`${_.defaultRouterPosition}`} component={HomePage}/>
+                    <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPage}/>
                     {/*<Route component={<Page404/>}/>*/}
                     <Route component={Page404}/>
 

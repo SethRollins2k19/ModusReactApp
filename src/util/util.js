@@ -31,5 +31,6 @@ export const _ = {
             ]
         }
         return date[lang]
-     }
+     },
+    defaultRouterPosition : '/'
 }

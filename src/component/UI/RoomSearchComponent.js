@@ -5,6 +5,7 @@ import BtnComponent from "./BtnComponent"
 import '../style/searchRoomStyle.sass'
 import DatePickerComponent from "./DatePickerComponent";
 import GuestsComponent from "./GuestsComponent";
+import {_} from "../../util/util";
 
 export default function RoomSearchComponent (props){
     return (
@@ -14,7 +15,7 @@ export default function RoomSearchComponent (props){
                 <label htmlFor="guests" className={'datepicker__label datepicker__label--guests'}>Guests</label>
                 <GuestsComponent />
                 <div className={'btn--find-room'}>
-                    <Link to={'/room'}><BtnComponent title={'Find room'} type={'Link'} locate={'/room'} /></Link>
+                    <Link to={`${_.defaultRouterPosition}room`}><BtnComponent title={'Find room'} type={'Link'} locate={'/room'} /></Link>
                 </div>
             </form>
         </FormContainer>

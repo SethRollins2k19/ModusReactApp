@@ -23,8 +23,8 @@ export default class MiniRoomComponent extends React.Component{
                 <img className={'mini-room__img'} src={this.props.img} alt="room"/>
                 <div className="mini-room__description">
                    <p className='mini-room__item'>
-                       <span className='mini-room__left'>№{this.props.hotelRoom} {this.props.isLux === true ? <span className={'mini-room__lux'}>lux</span> : ""}</span>
-                       <span className='mini-room__right'>{this.props.costPerDay} pre day</span>
+                       <span className='mini-room__left'>№ {this.props.hotelRoom} {this.props.isLux === true ? <span className={'mini-room__lux'}>lux</span> : ""}</span>
+                       <span className='mini-room__right'><span className="mini-room__value">{this.props.costPerDay}</span> per day</span>
                    </p>
                     <p className='mini-room__item' >
                         <span className='mini-room__left'>№{this.props.hotelRoom} {this.props.isLux === true ? <span className={'mini-room__lux'}>lux</span> : ""}</span>

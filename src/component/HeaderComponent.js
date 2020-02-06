@@ -4,6 +4,9 @@ import MainContainerComponent from "./containers/MainContainer"
 import './style/headerStyle.sass'
 import Logo from "./UI/LogoComponent";
 import Btn from "./UI/BtnComponent";
+import {_} from "../util/util";
+
+
 export default class HeaderComponent extends React.Component{
     constructor(props){
         super(props)
@@ -19,7 +22,11 @@ export default class HeaderComponent extends React.Component{
                 <MainContainerComponent>
                    <header className="header__inner">
                         <Logo/>
-                       <NavComponent locate={['/']} linksArr={this.props.links} isLogin={this.state.isLogin}>
+                       <NavComponent locate={this.props.links.map(item=>{
+                           item = item.replace(" ",'')
+                           item = _.defaultRouterPosition + (item === 'Home' ? '' : item)
+                           return item
+                       })} linksArr={this.props.links} isLogin={this.state.isLogin}>
                            {this.state.isLogin === false ? <div className={'btnBlock'}>
                                <Btn title={'login'}/>
                                <Btn title={'register'}/>
