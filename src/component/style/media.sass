@@ -3,8 +3,11 @@
   .header__inner
     .nav__menu
       grid-template-columns: repeat(auto-fit,minmax(45px, 1fr)) !important
+    .nav__personalAccount
+      margin-left: 60px
   .home-page
     height: auto
+
 
 
 @media (max-width: 900px)
@@ -41,8 +44,6 @@
       .nav__personalAccount
         cursor: pointer
         transition: background-color .6s linear
-        &:hover
-          background: #BC9CFF
         .account
           margin: 0
           border: none

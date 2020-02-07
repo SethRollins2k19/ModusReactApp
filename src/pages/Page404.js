@@ -1,6 +1,5 @@
 import React from "react"
-import {Link} from "react-router-dom";
-import MainContainerComponent from "../component/containers/MainContainer";
+import MainContainerComponent from "../component/containers/MainContainer"
 
 export default function Page404 (){
     return (
