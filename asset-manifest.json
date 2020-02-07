@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ModusReactApp/static/css/main.8cc88ae0.chunk.css",
-    "main.js": "/ModusReactApp/static/js/main.afa30ca5.chunk.js",
-    "main.js.map": "/ModusReactApp/static/js/main.afa30ca5.chunk.js.map",
+    "main.css": "/ModusReactApp/static/css/main.293d0680.chunk.css",
+    "main.js": "/ModusReactApp/static/js/main.399c67ba.chunk.js",
+    "main.js.map": "/ModusReactApp/static/js/main.399c67ba.chunk.js.map",
     "runtime-main.js": "/ModusReactApp/static/js/runtime-main.8fcac300.js",
     "runtime-main.js.map": "/ModusReactApp/static/js/runtime-main.8fcac300.js.map",
     "static/css/2.8f70debd.chunk.css": "/ModusReactApp/static/css/2.8f70debd.chunk.css",
-    "static/js/2.90f76cc8.chunk.js": "/ModusReactApp/static/js/2.90f76cc8.chunk.js",
-    "static/js/2.90f76cc8.chunk.js.map": "/ModusReactApp/static/js/2.90f76cc8.chunk.js.map",
+    "static/js/2.c8816306.chunk.js": "/ModusReactApp/static/js/2.c8816306.chunk.js",
+    "static/js/2.c8816306.chunk.js.map": "/ModusReactApp/static/js/2.c8816306.chunk.js.map",
     "index.html": "/ModusReactApp/index.html",
-    "precache-manifest.0cc63e6fa91b108a9b5c58e9336fa5ce.js": "/ModusReactApp/precache-manifest.0cc63e6fa91b108a9b5c58e9336fa5ce.js",
+    "precache-manifest.3e2caa957c302f50a75e12bf75dd2e11.js": "/ModusReactApp/precache-manifest.3e2caa957c302f50a75e12bf75dd2e11.js",
     "service-worker.js": "/ModusReactApp/service-worker.js",
     "static/css/2.8f70debd.chunk.css.map": "/ModusReactApp/static/css/2.8f70debd.chunk.css.map",
-    "static/css/main.8cc88ae0.chunk.css.map": "/ModusReactApp/static/css/main.8cc88ae0.chunk.css.map",
-    "static/js/2.90f76cc8.chunk.js.LICENSE": "/ModusReactApp/static/js/2.90f76cc8.chunk.js.LICENSE",
+    "static/css/main.293d0680.chunk.css.map": "/ModusReactApp/static/css/main.293d0680.chunk.css.map",
+    "static/js/2.c8816306.chunk.js.LICENSE": "/ModusReactApp/static/js/2.c8816306.chunk.js.LICENSE",
     "static/media/homePage.sass": "/ModusReactApp/static/media/background-1.f4f7f1bb.png",
     "static/media/background-2.png": "/ModusReactApp/static/media/background-2.92a311c4.png",
     "static/media/background-3.png": "/ModusReactApp/static/media/background-3.20f71cf4.png",
@@ -21,14 +21,21 @@
     "static/media/instagram.svg": "/ModusReactApp/static/media/instagram.104bbadd.svg",
     "static/media/keyboard-backspace.svg": "/ModusReactApp/static/media/keyboard-backspace.e198230b.svg",
     "static/media/logo.svg": "/ModusReactApp/static/media/logo.38e729eb.svg",
+    "static/media/noPict.png": "/ModusReactApp/static/media/noPict.d2e2063f.png",
     "static/media/room-1.png": "/ModusReactApp/static/media/room-1.3063a8c5.png",
+    "static/media/room-2.png": "/ModusReactApp/static/media/room-2.d7cef0d5.png",
+    "static/media/room-3.png": "/ModusReactApp/static/media/room-3.3d8d66c3.png",
+    "static/media/room-4.png": "/ModusReactApp/static/media/room-4.b5ebf46a.png",
+    "static/media/room-5.png": "/ModusReactApp/static/media/room-5.5fe5f577.png",
+    "static/media/star.svg": "/ModusReactApp/static/media/star.8f49b044.svg",
+    "static/media/starOutline.svg": "/ModusReactApp/static/media/starOutline.931c3532.svg",
     "static/media/twitter.svg": "/ModusReactApp/static/media/twitter.d042f79d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8fcac300.js",
     "static/css/2.8f70debd.chunk.css",
-    "static/js/2.90f76cc8.chunk.js",
-    "static/css/main.8cc88ae0.chunk.css",
-    "static/js/main.afa30ca5.chunk.js"
+    "static/js/2.c8816306.chunk.js",
+    "static/css/main.293d0680.chunk.css",
+    "static/js/main.399c67ba.chunk.js"
   ]
 }
