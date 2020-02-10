@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aae398fb8d58105fc2118d8690c2b91b",
+    "revision": "d638e5857c5270c2b173c4af4987c019",
     "url": "/ModusReactApp/index.html"
   },
   {
-    "revision": "7fef90a1e900680f633a",
+    "revision": "e05c1f38ce565b1d4766",
     "url": "/ModusReactApp/static/css/2.8f70debd.chunk.css"
   },
   {
-    "revision": "14141a8f8033b881c4f0",
-    "url": "/ModusReactApp/static/css/main.293d0680.chunk.css"
+    "revision": "51d0409156ddfb9228db",
+    "url": "/ModusReactApp/static/css/main.776c9d27.chunk.css"
   },
   {
-    "revision": "7fef90a1e900680f633a",
-    "url": "/ModusReactApp/static/js/2.c8816306.chunk.js"
+    "revision": "e05c1f38ce565b1d4766",
+    "url": "/ModusReactApp/static/js/2.9d8bbe4c.chunk.js"
   },
   {
     "revision": "dab28bac8be664d03c5f0a10cfa299e5",
-    "url": "/ModusReactApp/static/js/2.c8816306.chunk.js.LICENSE"
+    "url": "/ModusReactApp/static/js/2.9d8bbe4c.chunk.js.LICENSE"
   },
   {
-    "revision": "14141a8f8033b881c4f0",
-    "url": "/ModusReactApp/static/js/main.399c67ba.chunk.js"
+    "revision": "51d0409156ddfb9228db",
+    "url": "/ModusReactApp/static/js/main.5fab213b.chunk.js"
   },
   {
     "revision": "e6fc5ea40abcdf76ed2d",
@@ -38,6 +38,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "20f71cf40dfe5fd6b7e0d02c7f48e1f4",
     "url": "/ModusReactApp/static/media/background-3.20f71cf4.png"
+  },
+  {
+    "revision": "35a821322799755c1744e02f7eb5c973",
+    "url": "/ModusReactApp/static/media/comfort.35a82132.svg"
+  },
+  {
+    "revision": "42ab1b730094e7cd605879163f770fbd",
+    "url": "/ModusReactApp/static/media/convenience.42ab1b73.svg"
+  },
+  {
+    "revision": "b3249b8359a302d41a5964e600be9ec4",
+    "url": "/ModusReactApp/static/media/cosiness.b3249b83.svg"
   },
   {
     "revision": "6b1abf02ffffede57554b757fcdfafe8",
@@ -58,6 +70,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d2e2063f91c8ff1b17c81ac91b0ae949",
     "url": "/ModusReactApp/static/media/noPict.d2e2063f.png"
+  },
+  {
+    "revision": "c23680bd3aedf76fe1af97073bc47923",
+    "url": "/ModusReactApp/static/media/room-1-bedroom.c23680bd.png"
+  },
+  {
+    "revision": "62111f8e6530ed1be46c72b7eae2e28b",
+    "url": "/ModusReactApp/static/media/room-1-livingRoom.62111f8e.png"
   },
   {
     "revision": "3063a8c510360f6154bb8310d36c0347",
