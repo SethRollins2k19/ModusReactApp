@@ -1,0 +1,47 @@
+//< header
+.single-room__header
+  height: 35vw
+  display: grid
+  grid-template-columns: 2fr 1fr
+  grid-template-rows: 1fr 1fr
+
+.single-room__main-img
+  grid-row-start: 1
+  grid-row-end: -1
+.single-room__img
+  width: 100%
+  height: 100%
+//header />
+
+
+// < inner
+
+.single-room__inner
+  margin-top: 30px
+  display: grid
+  grid-template-columns: 2fr 1fr
+.single-room__title
+  color: #1F2041
+  font-size: 19px
+  font-weight: bold
+  font-family: Quicksand
+.single-room__description
+  display: grid
+  grid-template-columns: 1fr 1fr
+.details__item
+  width: 100%
+  max-width: 320px
+  padding: 20px
+  display: flex
+  //justify-content: space-between
+  align-content: center
+  img
+    width: 35px
+    margin-right: 10px
+.details__item:not(:last-of-type)
+  border-bottom: 1px solid #cccccc
+.details__title
+  margin: 0
+.details__description
+  margin: 0
+// inner />

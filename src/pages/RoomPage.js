@@ -12,6 +12,7 @@ export default class RoomPage extends React.Component  {
                         {ROOMS.map((room,index)=>{
                            return <MiniRoomComponent
                                key={index}
+                               slug={room.slug}
                                img={room.img !== null ? room.img : null}
                                hotelRoom={room.hotelRoom}
                                isLux={room.isLux}

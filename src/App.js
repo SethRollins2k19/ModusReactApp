@@ -7,6 +7,7 @@ import './component/style/mainStyle.sass'
 //components
 import HomePage from "./pages/HomePage"
 import RoomPage from "./pages/RoomPage"
+import SingleRoomPage from "./pages/SingleRoomPage"
 import Page404 from "./pages/Page404"
 //--header
 import HeaderComponent from "./component/HeaderComponent";
@@ -33,7 +34,8 @@ export default class App extends React.Component{
                 <Switch>
                     <Route exact path={`${_.defaultRouterPosition}`} component={HomePage}/>
                     <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPage}/>
-                    {/*<Route component={<Page404/>}/>*/}
+                    {/*<Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>*/}
+                    <Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>
                     <Route component={Page404}/>
 
                 </Switch>
