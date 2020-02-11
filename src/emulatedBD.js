@@ -20,7 +20,12 @@ export  const ROOMS = [
         isLux: false,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
-        reviews: Math.floor(Math.random() * 100 + 1),
+        reviews: {
+            excellent: Math.floor(Math.random() * 100 + 1),
+            nice: Math.floor(Math.random() * 100 + 1),
+            good: Math.floor(Math.random() * 100 + 1),
+            bad: Math.floor(Math.random() * 100 + 1)
+        },
         details: ['comfort','convenience','cosiness']
     },
     {
@@ -30,7 +35,12 @@ export  const ROOMS = [
         isLux: true,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
-        reviews: Math.floor(Math.random() * 100 + 1),
+        reviews: {
+            excellent: Math.floor(Math.random() * 100 + 1),
+            nice: Math.floor(Math.random() * 100 + 1),
+            good: Math.floor(Math.random() * 100 + 1),
+            bad: Math.floor(Math.random() * 100 + 1)
+        },
         details: ['comfort','cosiness']
     },
     {
@@ -40,7 +50,12 @@ export  const ROOMS = [
         isLux: false,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
-        reviews: Math.floor(Math.random() * 100 + 1),
+        reviews: {
+            excellent: Math.floor(Math.random() * 100 + 1),
+            nice: Math.floor(Math.random() * 100 + 1),
+            good: Math.floor(Math.random() * 100 + 1),
+            bad: Math.floor(Math.random() * 100 + 1)
+        },
         details: ['comfort','convenience','cosiness']
     },
     {
@@ -50,7 +65,12 @@ export  const ROOMS = [
         isLux: false,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
-        reviews: Math.floor(Math.random() * 100 + 1),
+        reviews: {
+            excellent: Math.floor(Math.random() * 100 + 1),
+            nice: Math.floor(Math.random() * 100 + 1),
+            good: Math.floor(Math.random() * 100 + 1),
+            bad: Math.floor(Math.random() * 100 + 1)
+        },
         details: ['comfort','convenience','cosiness']
     },
     {
@@ -60,7 +80,12 @@ export  const ROOMS = [
         isLux: true,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
-        reviews: Math.floor(Math.random() * 100 + 1),
+        reviews: {
+            excellent: Math.floor(Math.random() * 100 + 1),
+            nice: Math.floor(Math.random() * 100 + 1),
+            good: Math.floor(Math.random() * 100 + 1),
+            bad: Math.floor(Math.random() * 100 + 1)
+        },
         details: ['comfort','convenience','cosiness']
     },
     {
@@ -70,7 +95,12 @@ export  const ROOMS = [
         isLux: false,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
-        reviews: Math.floor(Math.random() * 100 + 1),
+        reviews: {
+            excellent: Math.floor(Math.random() * 100 + 1),
+            nice: Math.floor(Math.random() * 100 + 1),
+            good: Math.floor(Math.random() * 100 + 1),
+            bad: Math.floor(Math.random() * 100 + 1)
+        },
         details: ['comfort','convenience','cosiness']
     },
     {
@@ -80,7 +110,12 @@ export  const ROOMS = [
         isLux: true,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
-        reviews: Math.floor(Math.random() * 100 + 1),
+        reviews: {
+            excellent: Math.floor(Math.random() * 100 + 1),
+            nice: Math.floor(Math.random() * 100 + 1),
+            good: Math.floor(Math.random() * 100 + 1),
+            bad: Math.floor(Math.random() * 100 + 1)
+        },
         details: ['comfort','convenience','cosiness']
     },
 ]

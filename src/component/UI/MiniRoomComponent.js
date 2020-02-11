@@ -7,7 +7,13 @@ import {Link} from "react-router-dom";
 import {_} from "../../util/util";
 
 export default class MiniRoomComponent extends React.Component{
+
+
     render() {
+        const reviews = Object.values(this.props.reviews).reduce((total, value)=>{
+            return total + value
+        })
+
         return (
             <Link to={`${_.defaultRouterPosition}room/${this.props.slug}`}>
             <div className={'mini-room'}>
@@ -19,7 +25,7 @@ export default class MiniRoomComponent extends React.Component{
                    </div>
                     <div className='mini-room__item' >
                         <Rating rating={this.props.rating}/>
-                        <span className='mini-room__right'><span className="mini-room__value">{this.props.reviews}</span> reviews</span>
+                        <span className='mini-room__right'><span className="mini-room__value">{reviews}</span> reviews</span>
                     </div>
                 </div>
             </div>

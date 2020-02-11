@@ -10,7 +10,6 @@ import Banner from "../component/UI/Banner"
 //style
 import '../component/style/singleRoomPage.sass'
 
-
 //dev help
 import front from '../assets/rooms/room-1.png'
 import bedroom from '../assets/rooms/room-1-bedroom.png'
@@ -61,6 +60,64 @@ export default class SingleRoomPage extends React.Component{
                                 </div>
                                 <div className="single-room__impressions">
                                     <h2 className='single-room__title'>Room Impressions</h2>
+                                    <div>
+                                        <svg width="100%" height="100%" viewBox="0 0 42 42" className="donut">
+                                            <linearGradient id="linear-gradient">
+                                                <stop offset="0%" stop-color="#FFE39C"/>
+                                                <stop offset="100%" stop-color="#FFBA9C"/>
+                                            </linearGradient>
+                                            <linearGradient id="linear-gradient-2">
+                                                <stop offset="0%" stop-color="#6FCF97"/>
+                                                <stop offset="100%" stop-color="#66D2EA"/>
+                                            </linearGradient>
+                                            <linearGradient id="linear-gradient-3">
+                                                <stop offset="0%" stop-color="#BC9CFF"/>
+                                                <stop offset="100%" stop-color="#8BA4F9"/>
+                                            </linearGradient>
+                                            <linearGradient id="linear-gradient-4">
+                                                <stop offset="0%" stop-color="#919191"/>
+                                                <stop offset="100%" stop-color="#3D4975"/>
+                                            </linearGradient>
+                                            {/*linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)*/}
+                                            {/*180deg, #6FCF97 0%, #66D2EA 100%*/}
+                                            {/*#BC9CFF 0%, #8BA4F9*/}
+                                            {/*180deg, #919191 0%, #3D4975 100%*/}
+                                            <circle className="donut-hole" cx="21" cy="21" r="15.91549430918954"
+                                                    fill="#fff">
+
+                                            </circle>
+                                            <circle className="donut-ring" cx="21" cy="21" r="15.91549430918954"
+                                                    fill="transparent" stroke="#fff" stroke-width="1">
+
+                                            </circle>
+                                            {/*start circle value*/}
+                                            {/*bad zone*/}
+                                            {/*<circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"*/}
+                                            {/*        fill="transparent" stroke="url(#linear-gradient-4)" stroke-width="1"*/}
+                                            {/*        stroke-dasharray="100 100" stroke-dashoffset="100">*/}
+
+                                            {/*</circle>*/}
+                                            {/*good zone*/}
+                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
+                                                    fill="transparent" stroke="url(#linear-gradient-3)" stroke-width="1"
+                                                    stroke-dasharray="24 76" stroke-dashoffset="25">
+
+                                            </circle>
+                                            {/*nice zone*/}
+                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
+                                                    fill="transparent" stroke="url(#linear-gradient-2)" stroke-width="1"
+                                                    stroke-dasharray="24 76" stroke-dashoffset="0">
+
+                                            </circle>
+                                            {/*excellent zone*/}
+                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
+                                                    fill="transparent" stroke="url(#linear-gradient)" stroke-width="1"
+                                                    stroke-dasharray="50 50" stroke-dashoffset="-25">
+
+                                            </circle>
+
+                                        </svg>
+                                    </div>
                                 </div>
 
                             </div>
