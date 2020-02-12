@@ -27,6 +27,28 @@ const getDetails = (key ,detailsList)=>{
     let templateDetails = detailsList;
     return key in templateDetails ? templateDetails[key] : null;
 }
+
+const calcDiagram = (reviews)=>{
+    let totalReviews  = Object.values(reviews).reduce((total, value)=>{
+        return total + value
+    })
+    let avarageMassive = [];
+    for(let key in reviews){
+        avarageMassive.push((reviews[key]/totalReviews)*100);
+    }
+    avarageMassive = avarageMassive.reverse()
+    let objectMassive = []
+    for(let i = 0; i < avarageMassive.length; i++){
+        let temp = {
+            lengthOfLine: avarageMassive[i]-0.5,
+            revLength: 100 - (avarageMassive[i] - 0.5),
+            position: i === 0 ? 24.5 : objectMassive[i-1].position - avarageMassive[i-1]
+        }
+        objectMassive.push(temp)
+    }
+    objectMassive.push(totalReviews)
+    return objectMassive
+}
 export default class SingleRoomPage extends React.Component{
 
 
@@ -39,6 +61,8 @@ export default class SingleRoomPage extends React.Component{
             )
         }
         const { img, hotelRoom, isLux, costPerDay, reviews, details} = room
+        const diagramParams = calcDiagram(reviews)
+
         return (
             <div className='single-room'>
                 <header className='single-room__header'>
@@ -60,8 +84,8 @@ export default class SingleRoomPage extends React.Component{
                                 </div>
                                 <div className="single-room__impressions">
                                     <h2 className='single-room__title'>Room Impressions</h2>
-                                    <div>
-                                        <svg width="100%" height="100%" viewBox="0 0 42 42" className="donut">
+                                    <div className='reviews'>
+                                        <svg width="100%" height="100%" viewBox="0 0 42 42" className="reviews__diagram">
                                             <linearGradient id="linear-gradient">
                                                 <stop offset="0%" stop-color="#FFE39C"/>
                                                 <stop offset="100%" stop-color="#FFBA9C"/>
@@ -92,31 +116,43 @@ export default class SingleRoomPage extends React.Component{
                                             </circle>
                                             {/*start circle value*/}
                                             {/*bad zone*/}
-                                            {/*<circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"*/}
-                                            {/*        fill="transparent" stroke="url(#linear-gradient-4)" stroke-width="1"*/}
-                                            {/*        stroke-dasharray="100 100" stroke-dashoffset="100">*/}
-
-                                            {/*</circle>*/}
+                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
+                                                    fill="transparent" stroke="url(#linear-gradient-4)" stroke-width="1"
+                                                    stroke-dasharray={`${diagramParams[0].lengthOfLine} ${diagramParams[0].revLength}`} stroke-dashoffset={`${diagramParams[0].position}`}>
+                                            </circle>
                                             {/*good zone*/}
                                             <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
                                                     fill="transparent" stroke="url(#linear-gradient-3)" stroke-width="1"
-                                                    stroke-dasharray="24 76" stroke-dashoffset="25">
+                                                    stroke-dasharray={`${diagramParams[1].lengthOfLine} ${diagramParams[1].revLength}`} stroke-dashoffset={`${diagramParams[1].position}`}>
 
                                             </circle>
                                             {/*nice zone*/}
                                             <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
                                                     fill="transparent" stroke="url(#linear-gradient-2)" stroke-width="1"
-                                                    stroke-dasharray="24 76" stroke-dashoffset="0">
+                                                    stroke-dasharray={`${diagramParams[2].lengthOfLine} ${diagramParams[2].revLength}`} stroke-dashoffset={`${diagramParams[2].position}`}>
 
                                             </circle>
                                             {/*excellent zone*/}
                                             <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
                                                     fill="transparent" stroke="url(#linear-gradient)" stroke-width="1"
-                                                    stroke-dasharray="50 50" stroke-dashoffset="-25">
+                                                    stroke-dasharray={`${diagramParams[3].lengthOfLine} ${diagramParams[3].revLength}`} stroke-dashoffset={`${diagramParams[3].position}`}>
 
                                             </circle>
-
+                                            <g className="reviews-text">
+                                                <text x="50%" y="50%" className="reviews__total">
+                                                    {diagramParams[4]}
+                                                </text>
+                                                <text x="50%" y="50%" className="reviews__label">
+                                                    votes
+                                                </text>
+                                            </g>
                                         </svg>
+                                        <div className="reviews__description">
+                                            <p className='reviews__item reviews__item--excellent'>Excellent reviews</p>
+                                            <p className='reviews__item reviews__item--nice'>Nice reviews</p>
+                                            <p className='reviews__item reviews__item--good'>Good reviews</p>
+                                            <p className='reviews__item reviews__item--bad'>Bad reviews</p>
+                                        </div>
                                     </div>
                                 </div>
 
