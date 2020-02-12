@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/ModusReactApp/static/css/main.0bef7d60.chunk.css",
-    "main.js": "/ModusReactApp/static/js/main.3fb2d872.chunk.js",
-    "main.js.map": "/ModusReactApp/static/js/main.3fb2d872.chunk.js.map",
+    "main.js": "/ModusReactApp/static/js/main.f72b697c.chunk.js",
+    "main.js.map": "/ModusReactApp/static/js/main.f72b697c.chunk.js.map",
     "runtime-main.js": "/ModusReactApp/static/js/runtime-main.8fcac300.js",
     "runtime-main.js.map": "/ModusReactApp/static/js/runtime-main.8fcac300.js.map",
     "static/css/2.8f70debd.chunk.css": "/ModusReactApp/static/css/2.8f70debd.chunk.css",
     "static/js/2.9d8bbe4c.chunk.js": "/ModusReactApp/static/js/2.9d8bbe4c.chunk.js",
     "static/js/2.9d8bbe4c.chunk.js.map": "/ModusReactApp/static/js/2.9d8bbe4c.chunk.js.map",
     "index.html": "/ModusReactApp/index.html",
-    "precache-manifest.540ea4bade861577009490ca986c7627.js": "/ModusReactApp/precache-manifest.540ea4bade861577009490ca986c7627.js",
+    "precache-manifest.df11b00824db99c53a4b47b666d2abf3.js": "/ModusReactApp/precache-manifest.df11b00824db99c53a4b47b666d2abf3.js",
     "service-worker.js": "/ModusReactApp/service-worker.js",
     "static/css/2.8f70debd.chunk.css.map": "/ModusReactApp/static/css/2.8f70debd.chunk.css.map",
     "static/css/main.0bef7d60.chunk.css.map": "/ModusReactApp/static/css/main.0bef7d60.chunk.css.map",
@@ -41,6 +41,6 @@
     "static/css/2.8f70debd.chunk.css",
     "static/js/2.9d8bbe4c.chunk.js",
     "static/css/main.0bef7d60.chunk.css",
-    "static/js/main.3fb2d872.chunk.js"
+    "static/js/main.f72b697c.chunk.js"
   ]
 }
