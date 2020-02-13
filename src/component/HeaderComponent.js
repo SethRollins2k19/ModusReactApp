@@ -20,7 +20,7 @@ export default class HeaderComponent extends React.Component{
         return (
             <header className={'header'}>
                 <MainContainerComponent>
-                   <header className="header__inner">
+                   <div className="header__inner">
                         <Logo/>
                        <NavComponent locate={this.props.links.map(item=>{
                            item = item.replace(" ",'')
@@ -35,7 +35,7 @@ export default class HeaderComponent extends React.Component{
                        <HamburgerMenu func={()=>{
                            this.navOpen(this.state.isOpen)
                        }}/>
-                   </header>
+                   </div>
                 </MainContainerComponent>
             </header>
         );

@@ -29,7 +29,7 @@ import './component/style/media.sass'
 export default class App extends React.Component{
     render(){
         return(
-            <BrowserRouter>
+            <>
                 <HeaderComponent links={['Home','About Us','Services','Careers','News','Documentation']}/>
                 <Switch>
                     <Route exact path={`${_.defaultRouterPosition}`} component={HomePage}/>
@@ -40,7 +40,7 @@ export default class App extends React.Component{
 
                 </Switch>
                 <FooterComponent/>
-            </BrowserRouter>
+            </>
         )
     }
 }

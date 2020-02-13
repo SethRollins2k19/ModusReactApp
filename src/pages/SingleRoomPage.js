@@ -34,19 +34,36 @@ const calcDiagram = (reviews)=>{
     })
     let avarageMassive = [];
     for(let key in reviews){
-        avarageMassive.push((reviews[key]/totalReviews)*100);
+        avarageMassive.unshift((reviews[key]/totalReviews)*100);
     }
-    avarageMassive = avarageMassive.reverse()
-    let objectMassive = []
-    for(let i = 0; i < avarageMassive.length; i++){
-        let temp = {
-            lengthOfLine: avarageMassive[i]-0.5,
-            revLength: 100 - (avarageMassive[i] - 0.5),
-            position: i === 0 ? 24.5 : objectMassive[i-1].position - avarageMassive[i-1]
+    if(avarageMassive.find(item=>item>=90)){
+        let temp = avarageMassive.find(item=>item>=90);
+        let countNoZero = 0;
+        for(let index = 0; index < avarageMassive.length; index++){
+            countNoZero += avarageMassive[index] !== 0  && avarageMassive[index] < 90 ? 1 : 0
         }
+        let subTemp = countNoZero
+        for (let index = 0; index < avarageMassive.length; index++){
+            if(avarageMassive[index] === 0) {
+                continue
+            }
+            avarageMassive[index] = avarageMassive[index] === temp ? 90 : (10 / subTemp)
+        }
+    }
+    let objectMassive = []
+
+    for(let i = 0, j = 4; i < avarageMassive.length; i++){
+
+        let temp
+        temp = {
+            lengthOfLine: avarageMassive[i] - 0.5,
+            revLength: 100 - (avarageMassive[i] - 0.5),
+            position: objectMassive.length === 0 || i === 0 ? 24.5 : objectMassive[i - 1].position - avarageMassive[i - 1],
+            value: j === 1 ? " " : `-${j}`
+        }
+        j--
         objectMassive.push(temp)
     }
-    objectMassive.push(totalReviews)
     return objectMassive
 }
 export default class SingleRoomPage extends React.Component{
@@ -62,7 +79,9 @@ export default class SingleRoomPage extends React.Component{
         }
         const { img, hotelRoom, isLux, costPerDay, reviews, details} = room
         const diagramParams = calcDiagram(reviews)
-
+        let totalReviews  = Object.values(reviews).reduce((total, value)=>{
+            return total + value
+        })
         return (
             <div className='single-room'>
                 <header className='single-room__header'>
@@ -77,70 +96,62 @@ export default class SingleRoomPage extends React.Component{
                                 <div className="details">
                                     <h2 className='single-room__title'>Room Details</h2>
                                     <div className="details__inner">
-                                        {details.map(item =>{
-                                            return (<DetailsInner item={item}/>)
+                                        {details.map((item,index) =>{
+                                            return (<DetailsInner key={index} item={item}/>)
                                         })}
                                     </div>
                                 </div>
                                 <div className="single-room__impressions">
                                     <h2 className='single-room__title'>Room Impressions</h2>
+
                                     <div className='reviews'>
+
                                         <svg width="100%" height="100%" viewBox="0 0 42 42" className="reviews__diagram">
                                             <linearGradient id="linear-gradient">
-                                                <stop offset="0%" stop-color="#FFE39C"/>
-                                                <stop offset="100%" stop-color="#FFBA9C"/>
+                                                <stop offset="0%" stopColor="#FFE39C"/>
+                                                <stop offset="100%" stopColor="#FFBA9C"/>
                                             </linearGradient>
                                             <linearGradient id="linear-gradient-2">
-                                                <stop offset="0%" stop-color="#6FCF97"/>
-                                                <stop offset="100%" stop-color="#66D2EA"/>
+                                                <stop offset="0%" stopColor="#6FCF97"/>
+                                                <stop offset="100%" stopColor="#66D2EA"/>
                                             </linearGradient>
                                             <linearGradient id="linear-gradient-3">
-                                                <stop offset="0%" stop-color="#BC9CFF"/>
-                                                <stop offset="100%" stop-color="#8BA4F9"/>
+                                                <stop offset="0%" stopColor="#BC9CFF"/>
+                                                <stop offset="100%" stopColor="#8BA4F9"/>
                                             </linearGradient>
                                             <linearGradient id="linear-gradient-4">
-                                                <stop offset="0%" stop-color="#919191"/>
-                                                <stop offset="100%" stop-color="#3D4975"/>
+                                                <stop offset="0%" stopColor="#919191"/>
+                                                <stop offset="100%" stopColor="#3D4975"/>
                                             </linearGradient>
-                                            {/*linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)*/}
-                                            {/*180deg, #6FCF97 0%, #66D2EA 100%*/}
-                                            {/*#BC9CFF 0%, #8BA4F9*/}
-                                            {/*180deg, #919191 0%, #3D4975 100%*/}
                                             <circle className="donut-hole" cx="21" cy="21" r="15.91549430918954"
                                                     fill="#fff">
 
                                             </circle>
                                             <circle className="donut-ring" cx="21" cy="21" r="15.91549430918954"
-                                                    fill="transparent" stroke="#fff" stroke-width="1">
+                                                    fill="transparent" stroke="#fff" strokeWidth="1">
 
                                             </circle>
                                             {/*start circle value*/}
-                                            {/*bad zone*/}
-                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
-                                                    fill="transparent" stroke="url(#linear-gradient-4)" stroke-width="1"
-                                                    stroke-dasharray={`${diagramParams[0].lengthOfLine} ${diagramParams[0].revLength}`} stroke-dashoffset={`${diagramParams[0].position}`}>
-                                            </circle>
-                                            {/*good zone*/}
-                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
-                                                    fill="transparent" stroke="url(#linear-gradient-3)" stroke-width="1"
-                                                    stroke-dasharray={`${diagramParams[1].lengthOfLine} ${diagramParams[1].revLength}`} stroke-dashoffset={`${diagramParams[1].position}`}>
+                                            {diagramParams.map((item,index) => {
+                                                    let temp;
+                                                    try {
+                                                        temp = (<circle key={index}
+                                                                        className="donut-segment" cx="21" cy="21"
+                                                                        r="15.91549430918954"
+                                                                        fill="transparent" stroke={item.lengthOfLine !== -0.5 ? `url(#linear-gradient${item.value})`: "rgba(0,0,0,0)"}
+                                                                        strokeWidth="1"
+                                                                        strokeDasharray={`${item.lengthOfLine} ${item.revLength}`}
+                                                                        strokeDashoffset={`${item.position}`}>
+                                                        </circle>)
+                                                    } catch (e) {
+                                                        console.log(e)
+                                                    }
 
-                                            </circle>
-                                            {/*nice zone*/}
-                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
-                                                    fill="transparent" stroke="url(#linear-gradient-2)" stroke-width="1"
-                                                    stroke-dasharray={`${diagramParams[2].lengthOfLine} ${diagramParams[2].revLength}`} stroke-dashoffset={`${diagramParams[2].position}`}>
-
-                                            </circle>
-                                            {/*excellent zone*/}
-                                            <circle className="donut-segment" cx="21" cy="21" r="15.91549430918954"
-                                                    fill="transparent" stroke="url(#linear-gradient)" stroke-width="1"
-                                                    stroke-dasharray={`${diagramParams[3].lengthOfLine} ${diagramParams[3].revLength}`} stroke-dashoffset={`${diagramParams[3].position}`}>
-
-                                            </circle>
+                                                    return temp
+                                            })}
                                             <g className="reviews-text">
                                                 <text x="50%" y="50%" className="reviews__total">
-                                                    {diagramParams[4]}
+                                                    {totalReviews}
                                                 </text>
                                                 <text x="50%" y="50%" className="reviews__label">
                                                     votes
