@@ -17,6 +17,7 @@ import livingRoom from '../assets/rooms/room-1-livingRoom.png'
 import MainContainerComponent from "../component/containers/MainContainer";
 import imgTest from '../assets/rooms/comfort.svg'
 import {ROOMS,DETAILS} from '../emulatedBD'
+import ReviewsComponent from "../component/UI/ReviewsComponent";
 
 
 const getRoom = (slug,rooms) => {
@@ -82,11 +83,11 @@ export default class SingleRoomPage extends React.Component{
         let totalReviews  = Object.values(reviews).reduce((total, value)=>{
             return total + value
         })
-        const reviewsInfo = totalReviews === 0 ? <Banner title="No reviews"/> : (<div className="reviews__description">
-            {reviews.excellent > 0 ? <p className='reviews__item reviews__item--excellent'>Excellent reviews</p> : null}
-            {reviews.nice > 0 ? <p className='reviews__item reviews__item--nice'>Nice reviews</p>: null}
-            {reviews.good > 0 ? <p className='reviews__item reviews__item--good'>Good reviews</p>: null}
-            {reviews.bad > 0 ? <p className='reviews__item reviews__item--bad'>Bad reviews</p>: null}
+        const reviewsInfo = totalReviews === 0 ? <Banner title="No reviews"/> : (<div className="diagram__description">
+            {reviews.excellent > 0 ? <p className='diagram__item diagram__item--excellent'>Excellent reviews</p> : null}
+            {reviews.nice > 0 ? <p className='diagram__item diagram__item--nice'>Nice reviews</p>: null}
+            {reviews.good > 0 ? <p className='diagram__item diagram__item--good'>Good reviews</p>: null}
+            {reviews.bad > 0 ? <p className='diagram__item diagram__item--bad'>Bad reviews</p>: null}
         </div>)
         return (
             <div className='single-room'>
@@ -110,9 +111,9 @@ export default class SingleRoomPage extends React.Component{
                                 <div className="single-room__impressions">
                                     <h2 className='single-room__title'>Room Impressions</h2>
 
-                                    <div className='reviews'>
+                                    <div className='single-room__diagram'>
 
-                                        <svg width="100%" height="100%" viewBox="0 0 42 42" className="reviews__diagram">
+                                        <svg width="100%" height="100%" viewBox="0 0 42 42" className="diagram">
                                             <linearGradient id="linear-gradient">
                                                 <stop offset="0%" stopColor="#FFE39C"/>
                                                 <stop offset="100%" stopColor="#FFBA9C"/>
@@ -155,11 +156,11 @@ export default class SingleRoomPage extends React.Component{
 
                                                     return temp
                                             })}
-                                            <g className="reviews-text">
-                                                <text x="50%" y="50%" className="reviews__total">
+                                            <g className="diagram__text">
+                                                <text x="50%" y="50%" className="diagram__total">
                                                     {totalReviews}
                                                 </text>
-                                                <text x="50%" y="50%" className="reviews__label">
+                                                <text x="50%" y="50%" className="diagram__label">
                                                     votes
                                                 </text>
                                             </g>
@@ -169,14 +170,12 @@ export default class SingleRoomPage extends React.Component{
                                 </div>
 
                             </div>
-                            <div className="single-room__reviews">
-                                <header className="single-room__reviews--wrapper">
+                            <div className="reviews">
+                                <header className="reviews__header">
                                     <h2 className='single-room__title'>Reviews from visitors</h2>
                                     <p>{totalReviews} reviews</p>
                                 </header>
-                                <div className="reviews__inner">
-                                    
-                                </div>
+                                <ReviewsComponent/>
                             </div>
                             <div className="single-room__rules">
 

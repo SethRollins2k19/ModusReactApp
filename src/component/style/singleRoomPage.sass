@@ -45,16 +45,16 @@
 .details__description
   margin: 0
 
-.reviews
+.single-room__diagram
   display: flex
   justify-content: flex-start
   align-items: center
-.reviews__diagram
+.diagram
   width: 160px
   margin-right: 25px
-.reviews__item
+.diagram__item
   position: relative
-.reviews__item:before
+.diagram__item:before
   content: ''
   position: absolute
   left: -20px
@@ -63,18 +63,18 @@
   border-radius: 50%
   background: #BC9CFF
 
-.reviews__item--bad:before
+.diagram__item--bad:before
   background: linear-gradient(180deg, #919191 0%, #3D4975 100%)
-.reviews__item--good:before
+.diagram__item--good:before
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
-.reviews__item--nice:before
+.diagram__item--nice:before
   background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
-.reviews__item--excellent:before
+.diagram__item--excellent:before
   background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%)
-.reviews__text
-  font-family: Quicksand
+.diagram__text
+  font-family: Quicksand sans-serif
   font-size: 16px/1.4em
-.reviews__total
+.diagram__total
   font-size: 0.6em
   line-height: 1
   text-anchor: middle
@@ -84,7 +84,7 @@
   -ms-transform: translateY(0.2em)
   -webkit-transform: translateY(0.2em)
   transform: translateY(0.2em)
-.reviews__label
+.diagram__label
   font-size: 0.25em
   text-transform: uppercase
   text-anchor: middle
@@ -93,8 +93,54 @@
   -ms-transform: translateY(1.7em)
   -webkit-transform: translateY(1.7em)
   transform: translateY(1.7em)
-.single-room__reviews--wrapper
+.reviews__header
   display: flex
   justify-content: space-between
   align-items: center
+
+
+.reviews__header--post
+  img
+    width: 50px
+    height: 50px
+    border-radius: 50%
+.reviews__likes
+  cursor: pointer
+  display: flex
+  justify-content: space-evenly
+  width: 45px
+  align-items: center
+  border-radius: 22px
+  //border: 1px solid rgba(0,0,0,.25)
+  position: relative
+  background: #ffffff
+  p
+    transition: color .2s linear
+    margin: 0
+    //margin-left: 5px
+    color: rgba(0,0,0,.25)
+.reviews__likes:before
+  content: " "
+  position: absolute
+  top: 0
+  left: 0
+  cursor: pointer
+  margin-left: -1px
+  margin-top: -1px
+  border-radius: 22px
+  z-index: -1
+  width: calc(100% + 2px)
+  height: calc(100% + 2px)
+  background: rgba(0,0,0,.25)
+  transition: .2s linear
+
+.reviews__likes--liked
+  p
+    color: #BC9CFF
+.likeSvg
+  transition: fill .2s linear
+.likeSvg:hover
+  fill: #BC9CFF
+.reviews__likes--liked:before
+  background: #BC9CFF
 // inner />

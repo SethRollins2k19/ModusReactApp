@@ -6,13 +6,16 @@ import img4 from './assets/rooms/room-4.png'
 import img5 from './assets/rooms/room-5.png'
 import bedroom from './assets/rooms/room-1-bedroom.png'
 import livingRoom from './assets/rooms/room-1-livingRoom.png'
+import authorImg from './assets/reviews/face.png'
+
+
 
 import comfort from './assets/rooms/comfort.svg'
 import convenience from './assets/rooms/convenience.svg'
 import cosiness from './assets/rooms/cosiness.svg'
 
 
-export  const ROOMS = [
+const ROOMS = [
     {
         slug: 'lux-room',
         img: [img1,bedroom,livingRoom],
@@ -120,7 +123,7 @@ export  const ROOMS = [
     },
 ]
 
-export const DETAILS = {
+const DETAILS = {
     comfort: {
         img: comfort,
         title: "Comfort",
@@ -137,3 +140,68 @@ export const DETAILS = {
         subTitle: "Here's fireplace"
     }
 }
+
+const REVIEWS = [
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: 55
+    },
+]
+
+export {ROOMS,DETAILS,REVIEWS}
