@@ -82,6 +82,12 @@ export default class SingleRoomPage extends React.Component{
         let totalReviews  = Object.values(reviews).reduce((total, value)=>{
             return total + value
         })
+        const reviewsInfo = totalReviews === 0 ? <Banner title="No reviews"/> : (<div className="reviews__description">
+            {reviews.excellent > 0 ? <p className='reviews__item reviews__item--excellent'>Excellent reviews</p> : null}
+            {reviews.nice > 0 ? <p className='reviews__item reviews__item--nice'>Nice reviews</p>: null}
+            {reviews.good > 0 ? <p className='reviews__item reviews__item--good'>Good reviews</p>: null}
+            {reviews.bad > 0 ? <p className='reviews__item reviews__item--bad'>Bad reviews</p>: null}
+        </div>)
         return (
             <div className='single-room'>
                 <header className='single-room__header'>
@@ -158,18 +164,19 @@ export default class SingleRoomPage extends React.Component{
                                                 </text>
                                             </g>
                                         </svg>
-                                        <div className="reviews__description">
-                                            <p className='reviews__item reviews__item--excellent'>Excellent reviews</p>
-                                            <p className='reviews__item reviews__item--nice'>Nice reviews</p>
-                                            <p className='reviews__item reviews__item--good'>Good reviews</p>
-                                            <p className='reviews__item reviews__item--bad'>Bad reviews</p>
-                                        </div>
+                                        {reviewsInfo}
                                     </div>
                                 </div>
 
                             </div>
                             <div className="single-room__reviews">
-
+                                <header className="single-room__reviews--wrapper">
+                                    <h2 className='single-room__title'>Reviews from visitors</h2>
+                                    <p>{totalReviews} reviews</p>
+                                </header>
+                                <div className="reviews__inner">
+                                    
+                                </div>
                             </div>
                             <div className="single-room__rules">
 
