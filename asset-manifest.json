@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/ModusReactApp/static/css/main.e8113105.chunk.css",
-    "main.js": "/ModusReactApp/static/js/main.3ddfa2ee.chunk.js",
-    "main.js.map": "/ModusReactApp/static/js/main.3ddfa2ee.chunk.js.map",
+    "main.css": "/ModusReactApp/static/css/main.61459c92.chunk.css",
+    "main.js": "/ModusReactApp/static/js/main.9f514abd.chunk.js",
+    "main.js.map": "/ModusReactApp/static/js/main.9f514abd.chunk.js.map",
     "runtime-main.js": "/ModusReactApp/static/js/runtime-main.8fcac300.js",
     "runtime-main.js.map": "/ModusReactApp/static/js/runtime-main.8fcac300.js.map",
     "static/css/2.939363c5.chunk.css": "/ModusReactApp/static/css/2.939363c5.chunk.css",
-    "static/js/2.48370ca4.chunk.js": "/ModusReactApp/static/js/2.48370ca4.chunk.js",
-    "static/js/2.48370ca4.chunk.js.map": "/ModusReactApp/static/js/2.48370ca4.chunk.js.map",
+    "static/js/2.2ea4464a.chunk.js": "/ModusReactApp/static/js/2.2ea4464a.chunk.js",
+    "static/js/2.2ea4464a.chunk.js.map": "/ModusReactApp/static/js/2.2ea4464a.chunk.js.map",
     "index.html": "/ModusReactApp/index.html",
-    "precache-manifest.98cf6518146229c8a20788454807017d.js": "/ModusReactApp/precache-manifest.98cf6518146229c8a20788454807017d.js",
+    "precache-manifest.b1eb580cef2209ade38dfad31268bde0.js": "/ModusReactApp/precache-manifest.b1eb580cef2209ade38dfad31268bde0.js",
     "service-worker.js": "/ModusReactApp/service-worker.js",
     "static/css/2.939363c5.chunk.css.map": "/ModusReactApp/static/css/2.939363c5.chunk.css.map",
-    "static/css/main.e8113105.chunk.css.map": "/ModusReactApp/static/css/main.e8113105.chunk.css.map",
-    "static/js/2.48370ca4.chunk.js.LICENSE": "/ModusReactApp/static/js/2.48370ca4.chunk.js.LICENSE",
+    "static/css/main.61459c92.chunk.css.map": "/ModusReactApp/static/css/main.61459c92.chunk.css.map",
+    "static/js/2.2ea4464a.chunk.js.LICENSE": "/ModusReactApp/static/js/2.2ea4464a.chunk.js.LICENSE",
     "static/media/homePage.sass": "/ModusReactApp/static/media/background-1.f4f7f1bb.png",
     "static/media/background-2.png": "/ModusReactApp/static/media/background-2.92a311c4.png",
     "static/media/background-3.png": "/ModusReactApp/static/media/background-3.20f71cf4.png",
     "static/media/comfort.svg": "/ModusReactApp/static/media/comfort.35a82132.svg",
     "static/media/convenience.svg": "/ModusReactApp/static/media/convenience.42ab1b73.svg",
     "static/media/cosiness.svg": "/ModusReactApp/static/media/cosiness.b3249b83.svg",
+    "static/media/face.png": "/ModusReactApp/static/media/face.d61f7e46.png",
     "static/media/facebook.svg": "/ModusReactApp/static/media/facebook.6b1abf02.svg",
     "static/media/instagram.svg": "/ModusReactApp/static/media/instagram.104bbadd.svg",
     "static/media/keyboard-backspace.svg": "/ModusReactApp/static/media/keyboard-backspace.e198230b.svg",
@@ -39,8 +40,8 @@
   "entrypoints": [
     "static/js/runtime-main.8fcac300.js",
     "static/css/2.939363c5.chunk.css",
-    "static/js/2.48370ca4.chunk.js",
-    "static/css/main.e8113105.chunk.css",
-    "static/js/main.3ddfa2ee.chunk.js"
+    "static/js/2.2ea4464a.chunk.js",
+    "static/css/main.61459c92.chunk.css",
+    "static/js/main.9f514abd.chunk.js"
   ]
 }
