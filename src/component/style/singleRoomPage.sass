@@ -98,17 +98,38 @@
   justify-content: space-between
   align-items: center
 
-
+.reviews__item
+  display: flex
+  flex-direction: column
+  margin-bottom: 30px
 .reviews__header--post
+  display: flex
+  align-items: center
+  div
+    color: rgba(31, 32, 65, 0.75)
+    margin-left: 10px
   img
     width: 50px
     height: 50px
+    border: 1px solid #ffffff
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1)
     border-radius: 50%
+.reviews__author
+  margin: 0
+  margin-top: 10px
+  font-weight: bold
+.reviews__date
+  margin: 5px 0 10px
+
 .reviews__likes
+  margin-top: 4px
+  margin-left: 2px
   cursor: pointer
   display: flex
   justify-content: space-evenly
   width: 45px
+  min-width: 45px
+  height: 20px
   align-items: center
   border-radius: 22px
   //border: 1px solid rgba(0,0,0,.25)
@@ -137,10 +158,13 @@
 .reviews__likes--liked
   p
     color: #BC9CFF
-.likeSvg
-  transition: fill .2s linear
-.likeSvg:hover
-  fill: #BC9CFF
 .reviews__likes--liked:before
-  background: #BC9CFF
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+
+.reviews__description
+  display: flex
+.reviews__text
+  color: rgba(31, 32, 65, 0.75)
+  line-height: 24px
+  margin: 0 0 0 13px
 // inner />

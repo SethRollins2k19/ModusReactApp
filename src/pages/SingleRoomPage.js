@@ -179,7 +179,7 @@ export default class SingleRoomPage extends React.Component{
                             </div>
                             <div className="single-room__rules">
 
-                            </div>
+                            </div>>
                         </div>
                         <div className="single-room__payment">
 

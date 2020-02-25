@@ -29,7 +29,14 @@ const ROOMS = [
             good: Math.floor(Math.random() * 100 + 1),
             bad: Math.floor(Math.random() * 100 + 1)
         },
-        details: ['comfort','convenience','cosiness']
+        guests: {
+            Adults: 2,
+            Children: 3,
+            Babies: 4
+        },
+        details: ['comfort','convenience','cosiness'],
+        minDate: new Date(new Date().getTime() + 	84000),
+        maxDate: new Date(new Date().getTime() + 	100000000 )
     },
     {
         slug: 'simple-room',
@@ -39,12 +46,19 @@ const ROOMS = [
         costPerDay: Math.floor(Math.random() * 8801 + 200),
         rating: Math.floor(Math.random() * 5 + 1),
         reviews: {
-            excellent: 0,
-            nice: 0,
-            good: 0,
-            bad: 0
+            excellent: 33,
+            nice: 33,
+            good: 33,
+            bad: 33
         },
-        details: ['comfort','cosiness']
+        guests: {
+            Adults: 2,
+            Children: 3,
+            Babies: 4
+        },
+        details: ['comfort','cosiness'],
+        minDate: new Date(new Date().getTime() + 	84000),
+        maxDate: new Date(new Date().getTime() + 	100000000 )
     },
     {
         slug: 'soft-room',
@@ -59,7 +73,14 @@ const ROOMS = [
             good: Math.floor(Math.random() * 100 + 1),
             bad: Math.floor(Math.random() * 100 + 1)
         },
-        details: ['comfort','convenience','cosiness']
+        guests: {
+            Adults: 2,
+            Children: 3,
+            Babies: 4
+        },
+        details: ['comfort','convenience','cosiness'],
+        minDate: new Date(new Date().getTime() + 	84000),
+        maxDate: new Date(new Date().getTime() + 	100000000 )
     },
     {
         slug: 'hard-room',
@@ -74,7 +95,14 @@ const ROOMS = [
             good: Math.floor(Math.random() * 100 + 1),
             bad: Math.floor(Math.random() * 100 + 1)
         },
-        details: ['comfort','convenience','cosiness']
+        guests: {
+            Adults: 2,
+            Children: 3,
+            Babies: 4
+        },
+        details: ['comfort','convenience','cosiness'],
+        minDate: new Date(new Date().getTime() + 	84000),
+        maxDate: new Date(new Date().getTime() + 	100000000 )
     },
     {
         slug: 'luxary-room',
@@ -89,7 +117,14 @@ const ROOMS = [
             good: Math.floor(Math.random() * 100 + 1),
             bad: Math.floor(Math.random() * 100 + 1)
         },
-        details: ['comfort','convenience','cosiness']
+        guests: {
+            Adults: 2,
+            Children: 3,
+            Babies: 4
+        },
+        details: ['comfort','convenience','cosiness'],
+        minDate: new Date(new Date().getTime() + 	84000),
+        maxDate: new Date(new Date().getTime() + 	8400000000 )
     },
     {
         slug: 'exclusive-room',
@@ -104,7 +139,14 @@ const ROOMS = [
             good: Math.floor(Math.random() * 100 + 1),
             bad: Math.floor(Math.random() * 100 + 1)
         },
-        details: ['comfort','convenience','cosiness']
+        guests: {
+            Adults: 2,
+            Children: 3,
+            Babies: 4
+        },
+        details: ['comfort','convenience','cosiness'],
+        minDate: new Date(new Date().getTime() + 	84000),
+        maxDate: new Date(new Date().getTime() + 	100000000 )
     },
     {
         slug: 'allIn-room',
@@ -119,7 +161,14 @@ const ROOMS = [
             good: Math.floor(Math.random() * 100 + 1),
             bad: Math.floor(Math.random() * 100 + 1)
         },
-        details: ['comfort','convenience','cosiness']
+        guests: {
+            Adults: 2,
+            Children: 3,
+            Babies: 4
+        },
+        details: ['comfort','convenience','cosiness'],
+        minDate: new Date(new Date().getTime() + 	84000),
+        maxDate: new Date(new Date().getTime() + 	84000000 )
     },
 ]
 
@@ -145,62 +194,71 @@ const REVIEWS = [
     {
         author: "Some name",
         authorImg: authorImg,
-        text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        text: "I like this room because of good personal that  was servicing me" +
+            "I like this room because of good personal that  was servicing me" +
+            "I like this room because of good personal that  was servicing me" +
+            "I like this room because of good personal that  was servicing me",
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
     {
         author: "Some name",
         authorImg: authorImg,
         text: "I like this room because of good personal that  was servicing me",
-        likeTotal: 55
+        likeTotal: Math.floor(Math.random() * 100 + 1)
+    },
+    {
+        author: "Some name",
+        authorImg: authorImg,
+        text: "I like this room because of good personal that  was servicing me",
+        likeTotal: Math.floor(Math.random() * 100 + 1)
     },
 ]
 

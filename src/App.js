@@ -6,7 +6,7 @@ import './component/style/mainStyle.sass'
 
 //components
 import HomePage from "./pages/HomePage"
-import RoomPage from "./pages/RoomPage"
+import RoomPageContainer from "./containers/RoomPageContainer";
 import SingleRoomPage from "./pages/SingleRoomPage"
 import Page404 from "./pages/Page404"
 //--header
@@ -30,10 +30,10 @@ export default class App extends React.Component{
     render(){
         return(
             <>
-                <HeaderComponent links={['Home','About Us','Services','Careers','News','Documentation']}/>
+                <HeaderComponent links={['Home','About Us','Room','Careers','News','Documentation']}/>
                 <Switch>
                     <Route exact path={`${_.defaultRouterPosition}`} component={HomePage}/>
-                    <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPage}/>
+                    <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPageContainer}/>
                     {/*<Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>*/}
                     <Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>
                     <Route component={Page404}/>

@@ -8,19 +8,16 @@ import 'react-datepicker/dist/react-datepicker.css'
 
 
 export default class DatePickerComponent extends React.Component{
-    // state = {
-    //     startDate: new Date(),
-    //     endDate: new Date(new Date().getTime() + 	100000000 )
-    // }
     static defaultProps = {
         multi: false,
         classNameAdd: '',
         title: ['','']
     }
     render() {
-        const {startDate,endDate, changeMinDate, changeMaxDate} = this.props
+        const {minDate,maxDate,changeMinDate,changeMaxDate} = this.props
         const seed =  Math.floor(Math.random()*10000)
-        const minDate = new Date(new Date().getTime() -	86400 )
+        const startDate = new Date()
+        // const minDate = new Date(new Date().getTime() -	86400 )
         return (
 
             <div className={'datepicker'}>
@@ -28,17 +25,18 @@ export default class DatePickerComponent extends React.Component{
                 <div className={'datepicker__item'}>
                 <label className={'datepicker__label'} htmlFor={`datepicker-${seed}`}>{this.props.title[0]}</label>
                 <DatePicker
-                    name="dataStart"
                     className={'datepicker__input'}
                     id={`datepicker-${seed}`}
-                    onChange={ date => changeMinDate(date)}
-                    minDate={minDate}
-                    maxDate={endDate}
-                    selected={startDate}
+                    onChange={date => {
+                        changeMinDate(date)
+                    }}
+                    minDate={startDate}
+                    maxDate={maxDate}
+                    selected={minDate}
                     selectsStart
                     // dayClassName={date => date === this.state.startDate ? "datepicker__start" : ""}
-                    startDate={startDate}
-                    endDate={endDate}
+                    startDate={minDate}
+                    endDate={maxDate}
                 />
                  </div>
                 <div className={'datepicker__item'}>
@@ -47,10 +45,10 @@ export default class DatePickerComponent extends React.Component{
                     className={'datepicker__input'}
                     id={`datepicker-${seed + 1}`}
                     onChange={date => changeMaxDate(date)}
-                    selected={endDate}
+                    selected={maxDate}
                     selectsEnd
-                    startDate={startDate}
-                    endDate={endDate}
+                    startDate={minDate}
+                    endDate={maxDate}
                     minDate={minDate}
                 />
                 </div>
