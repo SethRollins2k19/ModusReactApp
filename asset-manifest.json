@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/modusreactapp/static/css/main.074cf827.chunk.css",
-    "main.js": "/modusreactapp/static/js/main.8f63cd23.chunk.js",
-    "main.js.map": "/modusreactapp/static/js/main.8f63cd23.chunk.js.map",
+    "main.css": "/modusreactapp/static/css/main.7e05fe01.chunk.css",
+    "main.js": "/modusreactapp/static/js/main.531e87fc.chunk.js",
+    "main.js.map": "/modusreactapp/static/js/main.531e87fc.chunk.js.map",
     "runtime-main.js": "/modusreactapp/static/js/runtime-main.2cad758f.js",
     "runtime-main.js.map": "/modusreactapp/static/js/runtime-main.2cad758f.js.map",
-    "static/css/2.8f70debd.chunk.css": "/modusreactapp/static/css/2.8f70debd.chunk.css",
-    "static/js/2.991bf20a.chunk.js": "/modusreactapp/static/js/2.991bf20a.chunk.js",
-    "static/js/2.991bf20a.chunk.js.map": "/modusreactapp/static/js/2.991bf20a.chunk.js.map",
+    "static/css/2.c09bc95c.chunk.css": "/modusreactapp/static/css/2.c09bc95c.chunk.css",
+    "static/js/2.d2892a16.chunk.js": "/modusreactapp/static/js/2.d2892a16.chunk.js",
+    "static/js/2.d2892a16.chunk.js.map": "/modusreactapp/static/js/2.d2892a16.chunk.js.map",
     "index.html": "/modusreactapp/index.html",
-    "precache-manifest.081ae5928b06d941843fa783ee82437c.js": "/modusreactapp/precache-manifest.081ae5928b06d941843fa783ee82437c.js",
+    "precache-manifest.fc77e9f528f3345606e4f0273924e423.js": "/modusreactapp/precache-manifest.fc77e9f528f3345606e4f0273924e423.js",
     "service-worker.js": "/modusreactapp/service-worker.js",
-    "static/css/2.8f70debd.chunk.css.map": "/modusreactapp/static/css/2.8f70debd.chunk.css.map",
-    "static/css/main.074cf827.chunk.css.map": "/modusreactapp/static/css/main.074cf827.chunk.css.map",
-    "static/js/2.991bf20a.chunk.js.LICENSE": "/modusreactapp/static/js/2.991bf20a.chunk.js.LICENSE",
+    "static/css/2.c09bc95c.chunk.css.map": "/modusreactapp/static/css/2.c09bc95c.chunk.css.map",
+    "static/css/main.7e05fe01.chunk.css.map": "/modusreactapp/static/css/main.7e05fe01.chunk.css.map",
+    "static/js/2.d2892a16.chunk.js.LICENSE": "/modusreactapp/static/js/2.d2892a16.chunk.js.LICENSE",
     "static/media/homePage.sass": "/modusreactapp/static/media/background-1.f4f7f1bb.png",
     "static/media/background-2.png": "/modusreactapp/static/media/background-2.92a311c4.png",
     "static/media/background-3.png": "/modusreactapp/static/media/background-3.20f71cf4.png",
@@ -39,9 +39,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2cad758f.js",
-    "static/css/2.8f70debd.chunk.css",
-    "static/js/2.991bf20a.chunk.js",
-    "static/css/main.074cf827.chunk.css",
-    "static/js/main.8f63cd23.chunk.js"
+    "static/css/2.c09bc95c.chunk.css",
+    "static/js/2.d2892a16.chunk.js",
+    "static/css/main.7e05fe01.chunk.css",
+    "static/js/main.531e87fc.chunk.js"
   ]
 }
