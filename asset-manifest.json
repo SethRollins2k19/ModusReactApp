@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/ModusReactApp/static/css/main.d6916fa5.chunk.css",
-    "main.js": "/ModusReactApp/static/js/main.7938e660.chunk.js",
-    "main.js.map": "/ModusReactApp/static/js/main.7938e660.chunk.js.map",
+    "main.css": "/ModusReactApp/static/css/main.6dab7ddf.chunk.css",
+    "main.js": "/ModusReactApp/static/js/main.1bbf0b02.chunk.js",
+    "main.js.map": "/ModusReactApp/static/js/main.1bbf0b02.chunk.js.map",
     "runtime-main.js": "/ModusReactApp/static/js/runtime-main.8fcac300.js",
     "runtime-main.js.map": "/ModusReactApp/static/js/runtime-main.8fcac300.js.map",
     "static/css/2.c09bc95c.chunk.css": "/ModusReactApp/static/css/2.c09bc95c.chunk.css",
-    "static/js/2.d2892a16.chunk.js": "/ModusReactApp/static/js/2.d2892a16.chunk.js",
-    "static/js/2.d2892a16.chunk.js.map": "/ModusReactApp/static/js/2.d2892a16.chunk.js.map",
+    "static/js/2.2fe4f790.chunk.js": "/ModusReactApp/static/js/2.2fe4f790.chunk.js",
+    "static/js/2.2fe4f790.chunk.js.map": "/ModusReactApp/static/js/2.2fe4f790.chunk.js.map",
     "index.html": "/ModusReactApp/index.html",
-    "precache-manifest.c5471cfa01b31ad9ae59efea320ea609.js": "/ModusReactApp/precache-manifest.c5471cfa01b31ad9ae59efea320ea609.js",
+    "precache-manifest.648eb4b72eda48fb8d867092861c09bb.js": "/ModusReactApp/precache-manifest.648eb4b72eda48fb8d867092861c09bb.js",
     "service-worker.js": "/ModusReactApp/service-worker.js",
     "static/css/2.c09bc95c.chunk.css.map": "/ModusReactApp/static/css/2.c09bc95c.chunk.css.map",
-    "static/css/main.d6916fa5.chunk.css.map": "/ModusReactApp/static/css/main.d6916fa5.chunk.css.map",
-    "static/js/2.d2892a16.chunk.js.LICENSE": "/ModusReactApp/static/js/2.d2892a16.chunk.js.LICENSE",
+    "static/css/main.6dab7ddf.chunk.css.map": "/ModusReactApp/static/css/main.6dab7ddf.chunk.css.map",
+    "static/js/2.2fe4f790.chunk.js.LICENSE": "/ModusReactApp/static/js/2.2fe4f790.chunk.js.LICENSE",
     "static/media/homePage.sass": "/ModusReactApp/static/media/background-1.f4f7f1bb.png",
     "static/media/background-2.png": "/ModusReactApp/static/media/background-2.92a311c4.png",
     "static/media/background-3.png": "/ModusReactApp/static/media/background-3.20f71cf4.png",
@@ -40,8 +40,8 @@
   "entrypoints": [
     "static/js/runtime-main.8fcac300.js",
     "static/css/2.c09bc95c.chunk.css",
-    "static/js/2.d2892a16.chunk.js",
-    "static/css/main.d6916fa5.chunk.css",
-    "static/js/main.7938e660.chunk.js"
+    "static/js/2.2fe4f790.chunk.js",
+    "static/css/main.6dab7ddf.chunk.css",
+    "static/js/main.1bbf0b02.chunk.js"
   ]
 }
