@@ -135,8 +135,13 @@ export default class GuestsComponent extends React.Component{
                             this.setState((prevState) => ({
                                 isOpenAdditionalMenu: !prevState.isOpenAdditionalMenu
                             }))
-                            if(accept !== "undefined "){
-                                accept(guest)
+                            try {
+
+                                if (accept !== "undefined ") {
+                                    accept(guest)
+                                }
+                            } catch (e) {
+
                             }
                         }
                         }

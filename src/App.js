@@ -20,6 +20,10 @@ import {_} from "./util/util";
 
 //media style
 import './component/style/media.sass'
+import AboutUsPage from "./pages/AboutUsPage";
+import CareersPage from "./pages/CareersPage";
+import NewsPage from "./pages/NewsPage";
+import DocumentationPage from "./pages/DocumentationPage";
 
 
 
@@ -33,6 +37,10 @@ export default class App extends React.Component{
                 <HeaderComponent links={['Home','About Us','Room','Careers','News','Documentation']}/>
                 <Switch>
                     <Route exact path={`${_.defaultRouterPosition}`} component={HomePage}/>
+                    <Route exact path={`${_.defaultRouterPosition}aboutus`} component={AboutUsPage}/>
+                    <Route exact path={`${_.defaultRouterPosition}careers`} component={CareersPage}/>
+                    <Route exact path={`${_.defaultRouterPosition}news`} component={NewsPage}/>
+                    <Route exact path={`${_.defaultRouterPosition}documentation`} component={DocumentationPage}/>
                     <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPageContainer}/>
                     {/*<Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>*/}
                     <Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>

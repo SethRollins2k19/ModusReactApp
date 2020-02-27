@@ -3,12 +3,12 @@ import {Hero} from "../component/UI/Hero";
 import MainContainerComponent from "../component/StyleContainers/MainContainer";
 
 
-export default class NewsPage extends React.Component {
+export default class CareersPage extends React.Component {
     render() {
         return (
-            <div className="News">
+            <div className="Careers">
                 <MainContainerComponent>
-                    <Hero title="News" subtitle="This is news and events">
+                    <Hero title="Career in out company" subtitle="This is info about career in organization and our advantages">
 
                     </Hero>
                 </MainContainerComponent>

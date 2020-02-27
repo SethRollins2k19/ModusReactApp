@@ -21,11 +21,11 @@ export default class HeaderComponent extends React.Component{
             <header className={'header'}>
                 <MainContainerComponent>
                    <div className="header__inner">
-                        <Logo/>
+                        <Link to={_.defaultRouterPosition}><Logo/></Link>
                        <NavComponent locate={this.props.links.map(item=>{
                            item = item.replace(" ",'')
-                           item = _.defaultRouterPosition + (item === 'Home' ? '' : item)
-                           return item.toLowerCase()
+                           item = _.defaultRouterPosition + (item === 'Home' ? '' : item.toLowerCase())
+                           return item
                        })} linksArr={this.props.links} isLogin={this.state.isLogin}>
                            {this.state.isLogin === false ? <div className={'btnBlock'}>
                                <Btn title={'login'}/>
