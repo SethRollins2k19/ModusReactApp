@@ -1,19 +1,19 @@
 import React from "react"
-import MainContainerComponent from "../component/containers/MainContainer";
+import MainContainerComponent from "../component/StyleContainers/MainContainer";
 import MiniRoomComponent from "../component/UI/MiniRoomComponent";
-import {ROOMS} from '../emulatedBD'
 import Banner from "../component/UI/Banner";
+import UseFilterContainer from "../containers/UseFilterContainer";
 
 export default class RoomPage extends React.Component  {
     render() {
         const {rooms} = this.props
-
         return (
-            !rooms ? <Banner title="No rooms with such filter" subtitle="change setting of filter to view more rooms"/>
-            :
             <div className="room-page">
                 <MainContainerComponent>
                     <div className="room-page__inner">
+                        <UseFilterContainer/>
+                        {!rooms.length ? <Banner title="No rooms with such filter" subtitle="change setting of filter to view more rooms"/> :
+                        <div className="room-page__rooms">
                         {rooms.map((room,index)=>{
                            return <MiniRoomComponent
                                key={index}
@@ -26,6 +26,7 @@ export default class RoomPage extends React.Component  {
                                reviews={room.reviews}
                            />
                         })}
+                        </div>}
                     </div>
                 </MainContainerComponent>
             </div>

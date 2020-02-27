@@ -1,7 +1,7 @@
 import React from 'react'
 import './style/footerStyle.sass'
 import Logo from "./UI/LogoComponent"
-import MainContainerComponent from "./containers/MainContainer"
+import MainContainerComponent from "./StyleContainers/MainContainer"
 import enterArrow from '../assets/keyboard-backspace.svg'
 import Twitter from '../assets/twitter.svg'
 import FaceBook from '../assets/facebook.svg'

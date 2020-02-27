@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import MainContainerComponent from "./containers/MainContainer"
+import MainContainerComponent from "./StyleContainers/MainContainer"
 import './style/headerStyle.sass'
 import Logo from "./UI/LogoComponent";
 import Btn from "./UI/BtnComponent";

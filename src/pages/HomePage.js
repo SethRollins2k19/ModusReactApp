@@ -1,5 +1,5 @@
 import React from "react"
-import MainContainerComponent from "../component/containers/MainContainer";
+import MainContainerComponent from "../component/StyleContainers/MainContainer";
 import '../component/style/homePage.sass'
 import bg1 from '../assets/background-1.png'
 import bg2 from '../assets/background-2.png'

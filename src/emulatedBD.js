@@ -31,11 +31,11 @@ const ROOMS = [
         },
         guests: {
             Adults: 2,
-            Children: 3,
-            Babies: 4
+            Children: 1,
+            Babies: 1
         },
         details: ['comfort','convenience','cosiness'],
-        minDate: new Date(new Date().getTime() + 	84000),
+        minDate: new Date(new Date().getTime() + 	2999999),
         maxDate: new Date(new Date().getTime() + 	100000000 )
     },
     {
@@ -57,7 +57,7 @@ const ROOMS = [
             Babies: 4
         },
         details: ['comfort','cosiness'],
-        minDate: new Date(new Date().getTime() + 	84000),
+        minDate: new Date(new Date().getTime() + 84000),
         maxDate: new Date(new Date().getTime() + 	100000000 )
     },
     {
@@ -168,7 +168,7 @@ const ROOMS = [
         },
         details: ['comfort','convenience','cosiness'],
         minDate: new Date(new Date().getTime() + 	84000),
-        maxDate: new Date(new Date().getTime() + 	84000000 )
+        maxDate: new Date(new Date().getTime() + 	840000000 )
     },
 ]
 

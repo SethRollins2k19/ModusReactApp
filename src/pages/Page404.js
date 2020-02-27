@@ -1,5 +1,5 @@
 import React from "react"
-import MainContainerComponent from "../component/containers/MainContainer"
+import MainContainerComponent from "../component/StyleContainers/MainContainer"
 
 export default function Page404 (){
     return (

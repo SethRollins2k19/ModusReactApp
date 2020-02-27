@@ -1,13 +1,16 @@
 //room inner
-@function sum($numbers...)
-  $sum: 0
-  @each $number in $numbers
-    $sum: $sum + $number
-  @return $sum
 
 $roomWidth: 270px
 $roomHeight: 170px
+
+//end root
+
+
 .room-page__inner
+  display: grid
+  grid-template-columns: 1fr 3fr
+
+.room-page__rooms
   display: grid
   grid-template-columns: repeat(auto-fill, minmax($roomWidth, 1fr))
   justify-content: center

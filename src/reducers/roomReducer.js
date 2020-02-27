@@ -10,10 +10,11 @@ const RoomReducer = (
             minDate: new Date(),
             maxDate: new Date(new Date().getTime() + 	84000000) ,
             guests: {
-                total: 0,
-                Adults: 10,
-                Children: 10,
-                Babies: 10
+                maxTotal: 12,
+                total: 12,
+                Adults: 4,
+                Children: 4,
+                Babies: 4
             },
             minPrice: 0,
             maxPrice: 9999
@@ -39,21 +40,29 @@ const RoomReducer = (
                 }
             }
         }
-        case "CHANGE_GUEST": {
+        case "CHANGE_GUESTS": {
             return  {
                 ...state,
                 filter: {
                     ...state.filter,
                     guests: {
                         ...state.filter.guests,
-                        [action.name]: action.value
+                        ...action.guests
                     }
                 }
             }
         }
-        case "GUESTS": {
-            return state
+        case "CHANGE_PRICE": {
+            return  {
+                ...state,
+                filter: {
+                    ...state.filter,
+                    minPrice: parseInt(action.price[0]),
+                    maxPrice: parseInt(action.price[1])
+                }
+            }
         }
+
         case "FILTER": {
             return {
                 ...state,

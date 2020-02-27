@@ -14,7 +14,7 @@ import '../component/style/singleRoomPage.sass'
 import front from '../assets/rooms/room-1.png'
 import bedroom from '../assets/rooms/room-1-bedroom.png'
 import livingRoom from '../assets/rooms/room-1-livingRoom.png'
-import MainContainerComponent from "../component/containers/MainContainer";
+import MainContainerComponent from "../component/StyleContainers/MainContainer";
 import imgTest from '../assets/rooms/comfort.svg'
 import {ROOMS,DETAILS} from '../emulatedBD'
 import ReviewsComponent from "../component/UI/ReviewsComponent";
