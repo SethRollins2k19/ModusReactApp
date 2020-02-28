@@ -28,14 +28,17 @@ export default class ReviewsComponent extends React.Component {
                 {this.state.reviews?.map((review,index)=>{
                     return <Review key={index} review={review}/>
                 })}
-                <Btn title="Load more reviews"
-                     btnEvent={async () => {
-                         if(this.state.end < this.state.totalReviews){
-                            await this.loadMoreReviews(3)
+                {this.state.end < this.state.totalReviews?
+                    <Btn title="Load more reviews"
+                         btnEvent={async () => {
+                             await this.loadMoreReviews(3)
+                            }
                          }
-                     }
-                     }
-                />
+                    />
+                :
+                null
+                }
+
             </div>
         );
     }

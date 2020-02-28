@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React from "react"
 import '../style/guestsStyle.sass'
 import arrow from '../../assets/keyboard-backspace.svg'
 export default class GuestsComponent extends React.Component{
@@ -10,7 +10,7 @@ export default class GuestsComponent extends React.Component{
         // const maxTotal = this.state.maxTotal
         const {guest,setGuest} = this.props.guests
         const accept = this.props.accept
-        const {maxTotal, total, Adults, Children, Babies} = guest
+        const {maxTotal, total = 0, Adults, Children, Babies} = guest
         return (
             <div className='guests'>
                 <div className="guests__inner" onClick={e=>{

@@ -30,13 +30,16 @@ const ROOMS = [
             bad: Math.floor(Math.random() * 100 + 1)
         },
         guests: {
+            maxTotal: 4,
             Adults: 2,
             Children: 1,
             Babies: 1
         },
         details: ['comfort','convenience','cosiness'],
         minDate: new Date(new Date().getTime() + 	2999999),
-        maxDate: new Date(new Date().getTime() + 	100000000 )
+        maxDate: new Date(new Date().getTime() + 	100000000 ),
+        rules : ['No smoke', 'No children', 'No pets'],
+        refund: "You can cancel your reservation with a 100% refund before 48 hours. After it, in time of 5 days, you can refund exclude service charge."
     },
     {
         slug: 'simple-room',
@@ -52,13 +55,16 @@ const ROOMS = [
             bad: 33
         },
         guests: {
+            maxTotal: 9,
             Adults: 2,
             Children: 3,
             Babies: 4
         },
         details: ['comfort','cosiness'],
         minDate: new Date(new Date().getTime() + 84000),
-        maxDate: new Date(new Date().getTime() + 	100000000 )
+        maxDate: new Date(new Date().getTime() + 	100000000 ),
+        rules : ['No smoke', 'No children', 'No pets'],
+        refund: "You can cancel your reservation with a 100% refund before 48 hours. After it, in time of 5 days, you can refund exclude service charge."
     },
     {
         slug: 'soft-room',
@@ -74,13 +80,16 @@ const ROOMS = [
             bad: Math.floor(Math.random() * 100 + 1)
         },
         guests: {
+            maxTotal: 9,
             Adults: 2,
             Children: 3,
             Babies: 4
         },
         details: ['comfort','convenience','cosiness'],
         minDate: new Date(new Date().getTime() + 	84000),
-        maxDate: new Date(new Date().getTime() + 	100000000 )
+        maxDate: new Date(new Date().getTime() + 	100000000 ),
+        rules : ['No smoke', 'No children', 'No pets'],
+        refund: "You can cancel your reservation with a 100% refund before 48 hours. After it, in time of 5 days, you can refund exclude service charge."
     },
     {
         slug: 'hard-room',
@@ -96,13 +105,16 @@ const ROOMS = [
             bad: Math.floor(Math.random() * 100 + 1)
         },
         guests: {
+            maxTotal: 9,
             Adults: 2,
             Children: 3,
             Babies: 4
         },
         details: ['comfort','convenience','cosiness'],
         minDate: new Date(new Date().getTime() + 	84000),
-        maxDate: new Date(new Date().getTime() + 	100000000 )
+        maxDate: new Date(new Date().getTime() + 	100000000 ),
+        rules : ['No smoke', 'No children', 'No pets'],
+        refund: "You can cancel your reservation with a 100% refund before 48 hours. After it, in time of 5 days, you can refund exclude service charge."
     },
     {
         slug: 'luxary-room',
@@ -118,13 +130,16 @@ const ROOMS = [
             bad: Math.floor(Math.random() * 100 + 1)
         },
         guests: {
+            maxTotal: 9,
             Adults: 2,
             Children: 3,
             Babies: 4
         },
         details: ['comfort','convenience','cosiness'],
         minDate: new Date(new Date().getTime() + 	84000),
-        maxDate: new Date(new Date().getTime() + 	8400000000 )
+        maxDate: new Date(new Date().getTime() + 	8400000000 ),
+        rules : ['No smoke', 'No children', 'No pets'],
+        refund: "You can cancel your reservation with a 100% refund before 48 hours. After it, in time of 5 days, you can refund exclude service charge."
     },
     {
         slug: 'exclusive-room',
@@ -140,13 +155,16 @@ const ROOMS = [
             bad: Math.floor(Math.random() * 100 + 1)
         },
         guests: {
+            maxTotal: 9,
             Adults: 2,
             Children: 3,
             Babies: 4
         },
         details: ['comfort','convenience','cosiness'],
         minDate: new Date(new Date().getTime() + 	84000),
-        maxDate: new Date(new Date().getTime() + 	100000000 )
+        maxDate: new Date(new Date().getTime() + 	100000000 ),
+        rules : ['No smoke', 'No children', 'No pets'],
+        refund: "You can cancel your reservation with a 100% refund before 48 hours. After it, in time of 5 days, you can refund exclude service charge."
     },
     {
         slug: 'allIn-room',
@@ -162,13 +180,16 @@ const ROOMS = [
             bad: Math.floor(Math.random() * 100 + 1)
         },
         guests: {
+            maxTotal: 9,
             Adults: 2,
             Children: 3,
             Babies: 4
         },
         details: ['comfort','convenience','cosiness'],
         minDate: new Date(new Date().getTime() + 	84000),
-        maxDate: new Date(new Date().getTime() + 	840000000 )
+        maxDate: new Date(new Date().getTime() + 	840000000 ),
+        rules : ['No smoke', 'No children', 'No pets'],
+        refund: "You can cancel your reservation with a 100% refund before 48 hours. After it, in time of 5 days, you can refund exclude service charge."
     },
 ]
 

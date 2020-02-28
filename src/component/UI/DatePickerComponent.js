@@ -18,9 +18,8 @@ export default class DatePickerComponent extends React.Component{
         title: ['','']
     }
     render() {
-        const {startDate,endDate, changeMinDate, changeMaxDate} = this.props
+        const {startDate,endDate, changeMinDate, changeMaxDate, minLimit = new Date(new Date().getTime() -	864000 ), maxLimit = new Date("2020/12/31")} = this.props
         const seed =  Math.floor(Math.random()*10000)
-        const minDate = new Date(new Date().getTime() -	864000 )
         return (
 
             <div className={'datepicker'}>
@@ -32,7 +31,7 @@ export default class DatePickerComponent extends React.Component{
                     className={'datepicker__input'}
                     id={`datepicker-${seed}`}
                     onChange={ date => changeMinDate(date - 840000)}
-                    minDate={minDate}
+                    minDate={minLimit}
                     maxDate={endDate}
                     selected={startDate}
                     selectsStart
@@ -44,14 +43,15 @@ export default class DatePickerComponent extends React.Component{
                 <div className={'datepicker__item'}>
                 <label className={'datepicker__label'} htmlFor={`datepicker-${seed + 1}`}>{this.props.title[1]}</label>
                 <DatePicker
-                    className={'datepicker__input'}
+                    className={'datepicker__input datepicker__input--end'}
                     id={`datepicker-${seed + 1}`}
                     onChange={date => changeMaxDate(date)}
                     selected={endDate}
                     selectsEnd
                     startDate={startDate}
                     endDate={endDate}
-                    minDate={minDate}
+                    minDate={startDate}
+                    maxDate={maxLimit}
                 />
                 </div>
                 </div>

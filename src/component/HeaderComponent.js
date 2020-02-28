@@ -13,20 +13,44 @@ export default class HeaderComponent extends React.Component{
         this.props = props
         this.state = {
             isLogin: false,
-            userName: 'None'
+            userName: 'None',
+            links: [...this.props.links]
         }
     }
+    async componentDidMount() {
+        await this.setState(prevState=>{
+            return {
+                ...prevState,
+                links: prevState.links.map(item=>{
+                    item = item.replace(" ",'')
+                    item = _.defaultRouterPosition + (item === 'Home' ? '' : item.toLowerCase())
+                    return item
+                })
+            }
+        })
+        // console.log(this.state.links)
+    }
+    onClick = () => {
+        this.setState(prevState=>{
+            return {
+                ...prevState,
+                links: prevState.links.map(item=>{
+                    item = item.replace(" ",'')
+                    item = _.defaultRouterPosition + (item === 'Home' ? '' : item.toLowerCase())
+                    return item
+                })
+            }
+        })
+    }
+
     render() {
+        const links = this.state.links
         return (
             <header className={'header'}>
                 <MainContainerComponent>
                    <div className="header__inner">
                         <Link to={_.defaultRouterPosition}><Logo/></Link>
-                       <NavComponent locate={this.props.links.map(item=>{
-                           item = item.replace(" ",'')
-                           item = _.defaultRouterPosition + (item === 'Home' ? '' : item.toLowerCase())
-                           return item
-                       })} linksArr={this.props.links} isLogin={this.state.isLogin}>
+                       <NavComponent locate={links} linksArr={this.props.links} isLogin={this.state.isLogin}>
                            {this.state.isLogin === false ? <div className={'btnBlock'}>
                                <Btn title={'login'}/>
                                <Btn title={'register'}/>
@@ -43,7 +67,8 @@ export default class HeaderComponent extends React.Component{
 }
 
 function NavComponent(props) {
-    const links = props.linksArr.map((link,keys)=><LinkComponent locate={props.locate[keys]} key={keys} linkTitle={link}/>)
+    const links = props.linksArr.map((link,keys)=>{
+        return <LinkComponent locate={props.locate[keys]} key={keys} linkTitle={link}/>})
     return (
         <nav className={`nav ${props.isLogin === true ? 'nav--logined' : ''}`} >
             <section className={'nav__menu'}>{links}</section>
@@ -53,12 +78,11 @@ function NavComponent(props) {
 }
 
 class LinkComponent extends React.Component{
-    static defaultProps = {
-        locale: ''
-    }
     render() {
+        // console.log(window.location.href.split('/').reverse()[0].replace('/','') === this.props.locate.replace('/',""))
+        // ${window.location.href.split('/').reverse()[0].replace('/','') === this.props.locate.replace('/',"") ? "nav__link--active": null}
         return (
-            <Link to={this.props.locate} className={'nav__link'}>{this.props.linkTitle}</Link>
+            <Link to={this.props.locate} className={`nav__link `}>{this.props.linkTitle}</Link>
         )
     }
 }

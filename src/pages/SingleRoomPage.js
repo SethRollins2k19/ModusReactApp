@@ -15,9 +15,11 @@ import front from '../assets/rooms/room-1.png'
 import bedroom from '../assets/rooms/room-1-bedroom.png'
 import livingRoom from '../assets/rooms/room-1-livingRoom.png'
 import MainContainerComponent from "../component/StyleContainers/MainContainer";
-import imgTest from '../assets/rooms/comfort.svg'
-import {ROOMS,DETAILS} from '../emulatedBD'
+import {DETAILS} from '../emulatedBD'
 import ReviewsComponent from "../component/UI/ReviewsComponent";
+import DatePickerComponent from "../component/UI/DatePickerComponent";
+import {SingleRoomGuestsWrapper} from "../component/UI/ComponentWrappers/SingleRoomGuestsWrapper";
+import Btn from "../component/UI/BtnComponent";
 
 
 const getRoom = (slug,rooms) => {
@@ -67,18 +69,39 @@ const calcDiagram = (reviews)=>{
     }
     return objectMassive
 }
-export default class SingleRoomPage extends React.Component{
+const getSubstrDate = (firstDate, secondDate) => {
+    return Math.round((secondDate - firstDate)/1000/86000)
+}
 
+export default class SingleRoomPage extends React.Component{
+    state = {
+        start: this.props.currentDate.start,
+        end: this.props.currentDate.end,
+        room: null,
+        total: getSubstrDate(this.props.currentDate.start,this.props.currentDate.end)
+    }
+    componentDidMount() {
+        const room = getRoom(this.props.match.params.slug, this.props.rooms)
+        this.setState(prevState=>({
+            ...prevState,
+            room: room,
+            totalPrice: prevState.total * room.costPerDay
+        }))
+    }
 
     render() {
-
-        const room = getRoom(this.props.match.params.slug, ROOMS)
+        const room = this.state.room
         if(!room){
             return (
                 <Banner title="no such page" subtitle="Somewhen here will be room, but no now"/>
             )
         }
-        const { img, hotelRoom, isLux, costPerDay, reviews, details} = room
+        const { img,guests, hotelRoom, minDate, maxDate,isLux, costPerDay, reviews, details, rules, refund} = room
+
+        let guest = {
+            ...guests,
+            total: guests.Adults + guests.Babies + guests.Children
+        }
         const diagramParams = calcDiagram(reviews)
         let totalReviews  = Object.values(reviews).reduce((total, value)=>{
             return total + value
@@ -178,11 +201,59 @@ export default class SingleRoomPage extends React.Component{
                                 <ReviewsComponent/>
                             </div>
                             <div className="single-room__rules">
-
-                            </div>>
+                                <div className="rules">
+                                    <p className="single-room__title">Rules</p>
+                                    <ul className="rules__list">
+                                        {rules.map((item,index)=><li key={index} className="rules__item"><span className="rules__span">{item}</span></li>)}
+                                    </ul>
+                                </div>
+                                <div className="refund">
+                                    <p className="single-room__title">Cancellation</p>
+                                    <p className="refund__text">
+                                        {refund}
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div className="single-room__payment">
-
+                        <div className="payment">
+                            <div className="payment__title-Block">
+                                <p className="payment__hotel-room">№ {hotelRoom} <span className="payment__lux">{isLux? "Lux" : null}</span></p>
+                                <p className="payment__cost"><span className="payment__per-day">${costPerDay}</span> per day</p>
+                            </div>
+                            <DatePickerComponent
+                                multi={true}
+                                classNameAdd={'datepicker--room-search datepicker--single-room'}
+                                title={['Arrived', 'Shipped']}
+                                minLimit={minDate}
+                                maxLimit={maxDate}
+                                startDate={this.state.start}
+                                endDate={this.state.end}
+                                changeMinDate={date=>this.setState(prevState=>({
+                                    ...prevState,
+                                    start: date,
+                                    total: getSubstrDate(date, prevState.end),
+                                    totalPrice: getSubstrDate(date, prevState.end) * prevState.room.costPerDay
+                                }))}
+                                changeMaxDate={date=>this.setState(prevState=>({
+                                    ...prevState,
+                                    end: date,
+                                    total: getSubstrDate(prevState.start,date),
+                                    totalPrice: getSubstrDate(prevState.start,date) * prevState.room.costPerDay
+                                }))}
+                            />
+                            <SingleRoomGuestsWrapper addClassName={"payment__guests"} guests={guest}/>
+                            <div className="payment__price">
+                                <span>${costPerDay} x {this.state.total} {this.state.total === 1 ? "day" : "days"}</span>
+                                <span>${this.state.totalPrice}</span>
+                            </div>
+                            <div className="payment__total">
+                                <p>Total</p>
+                                <span className="payment__dots"></span>
+                                <p>${this.state.totalPrice}</p>
+                            </div>
+                            <div className="payment__btn">
+                                <Btn title={"reserve it up"}/>
+                            </div>
                         </div>
                     </div>
                 </MainContainerComponent>
@@ -190,6 +261,9 @@ export default class SingleRoomPage extends React.Component{
         );
     }
 }
+
+
+
 
 
 function DetailsInner ({item}){

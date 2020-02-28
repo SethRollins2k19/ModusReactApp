@@ -1,9 +1,10 @@
 .datepicker-multi
   .react-datepicker-popper
     z-index: 9999 !important
-
-  .react-datepicker-popper:last-of-type
-    left: -25px !important
+  .datepicker__item .react-datepicker-popper
+    left: -50px !important
+  .datepicker__item:last-of-type .react-datepicker-popper
+    left: -82px !important
   .react-datepicker__week *
     margin: 1px 0 !important
   .react-datepicker__day--in-selecting-range
@@ -51,3 +52,5 @@
     background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%)
     border-radius: 50% !important
     color: white !important
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow, .react-datepicker__month-read-view--down-arrow, .react-datepicker__month-year-read-view--down-arrow
+  margin-left: 69px !important

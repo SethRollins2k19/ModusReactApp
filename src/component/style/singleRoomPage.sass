@@ -22,9 +22,12 @@
   grid-template-columns: 2fr 1fr
 .single-room__title
   color: #1F2041
-  font-size: 19px
+  font-size: 23px
   font-weight: bold
   font-family: Quicksand
+
+.single-room__info
+  padding: 0 15px
 .single-room__description
   display: grid
   grid-template-columns: 1fr 1fr
@@ -167,4 +170,76 @@
   color: rgba(31, 32, 65, 0.75)
   line-height: 24px
   margin: 0 0 0 13px
+
+.single-room__rules
+  display: grid
+  grid-template-columns: 1fr 1fr
+
+.rules__list
+  padding: 0
+.rules__item
+  font-size: 18px
+  color:  rgba(31, 32, 65, 0.25)
+.rules__item:not(:first-of-type)
+  margin-top: 10px
+.rules__span
+  color: rgba(31, 32, 65, 0.75)
+.refund__text
+  font-size: 18px
+  color: rgba(31, 32, 65, 0.75)
+.payment
+  max-height: 450px
+  max-width: 350px
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2)
+  border-radius: 4px
+  padding: 40px 30px
+.payment__title-Block
+  display: flex
+  justify-content: space-between
+.payment__hotel-room
+  margin: 0
+  font-size: 25px
+  color: #1F2041
+  font-weight: bold
+  .payment__lux
+    font-size: 17px
+    color: #BC9CFF
+.payment__cost
+  margin: 0
+  font-size: 17px
+  color:  rgba(31, 32, 65, 0.5)
+  .payment__per-day
+    font-size: 25px
+    font-weight: bold
+.datepicker--single-room,
+.payment__guests,
+.payment__total,
+.payment__btn
+  margin-top: 25px
+.payment__price
+  display: flex
+  justify-content: space-between
+  color: rgba(31, 32, 65, 0.75)
+  font-size: 21px
+  font-weight: bolder
+.payment__total
+  display: flex
+  justify-content: space-between
+  p
+    margin: 0
+    color: #1F2041
+    font-weight: bold
+    font-size: 24px
+
+  p:last-of-type
+    padding-left: 5px
+  p:first-of-type
+
+    padding-right: 5px
+.payment__dots
+  width: 100%
+  border-bottom: 1px dotted rgba(31, 32, 65, 0.75)
+.payment__btn
+  .btn
+   width: 100%
 // inner />

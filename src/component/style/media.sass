@@ -103,6 +103,9 @@
       top: 17px
     .hamburgerMenu__inner
       display: flex
+  .nav__link--active
+    background: #BC9CFF !important
+    color: white !important
   //btn media
   .btn
     font-size: 10px
@@ -145,6 +148,38 @@
   .filter__item
     padding: 5px 10px
     min-width: 265px
+  .single-room__inner
+    display: flex
+    flex-direction: column
+    align-items: center
+  //.payment
+  .payment__hotel-room
+    font-size: 19px
+    .payment__lux
+      font-size: 14px
+  .payment__cost
+    font-size: 14px
+    .payment__per-day
+      font-size: 19px
+
+
+@media (max-width: 600px)
+  .footer__inner
+    grid-template-columns: 2fr repeat(3,1fr)
+  .single-room__description
+    display: flex
+    flex-direction: column
+  .details__item
+    max-width: 100%
+  .social
+    max-height: 20px
+  .social-icon:not(:last-of-type)
+    margin-right: 3px
+  .social-icon img
+    width: 15px
+    height: 15px
+
+
 @media (max-width: 350px)
   .footer__item .logo
     width: 80px

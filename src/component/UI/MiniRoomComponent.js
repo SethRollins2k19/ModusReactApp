@@ -1,7 +1,6 @@
 import React from "react"
 import '../style/roomStyle.sass'
 import Rating from "./Rating";
-import PropTypes from '../../../node_modules/prop-types'
 import noImg from '../../assets/rooms/noPict.png'
 import {Link} from "react-router-dom";
 import {_} from "../../util/util";

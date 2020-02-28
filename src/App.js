@@ -1,5 +1,4 @@
 import React from 'react'
-import {BrowserRouter} from "react-router-dom"
 import { Switch, Route } from 'react-router-dom'
 //main style
 import './component/style/mainStyle.sass'
@@ -7,7 +6,6 @@ import './component/style/mainStyle.sass'
 //components
 import HomePage from "./pages/HomePage"
 import RoomPageContainer from "./containers/RoomPageContainer";
-import SingleRoomPage from "./pages/SingleRoomPage"
 import Page404 from "./pages/Page404"
 //--header
 import HeaderComponent from "./component/HeaderComponent";
@@ -19,11 +17,14 @@ import FooterComponent from "./component/FooterComponent";
 import {_} from "./util/util";
 
 //media style
-import './component/style/media.sass'
 import AboutUsPage from "./pages/AboutUsPage";
 import CareersPage from "./pages/CareersPage";
 import NewsPage from "./pages/NewsPage";
 import DocumentationPage from "./pages/DocumentationPage";
+import SingleRoomPageContainer from "./containers/SingleRoomPageContainer";
+
+import './component/style/media.sass'
+
 
 
 
@@ -43,7 +44,7 @@ export default class App extends React.Component{
                     <Route exact path={`${_.defaultRouterPosition}documentation`} component={DocumentationPage}/>
                     <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPageContainer}/>
                     {/*<Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>*/}
-                    <Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>
+                    <Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPageContainer}/>
                     <Route component={Page404}/>
 
                 </Switch>
