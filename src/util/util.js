@@ -32,6 +32,6 @@ export const _ = {
         }
         return date[lang]
      },
-    defaultRouterPosition : '/ModusReactApp/',
-    // defaultRouterPosition : '/'
+    // defaultRouterPosition : '/ModusReactApp/',
+    defaultRouterPosition : '/'
 }

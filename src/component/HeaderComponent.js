@@ -12,8 +12,6 @@ export default class HeaderComponent extends React.Component{
         super(props)
         this.props = props
         this.state = {
-            isLogin: false,
-            userName: 'None',
             links: [...this.props.links]
         }
     }
@@ -28,7 +26,6 @@ export default class HeaderComponent extends React.Component{
                 })
             }
         })
-        // console.log(this.state.links)
     }
     onClick = () => {
         this.setState(prevState=>{
@@ -45,16 +42,18 @@ export default class HeaderComponent extends React.Component{
 
     render() {
         const links = this.state.links
+        const isLogin = this.props.isLogin
+        const userName = this.props.userName
         return (
             <header className={'header'}>
                 <MainContainerComponent>
                    <div className="header__inner">
                         <Link to={_.defaultRouterPosition}><Logo/></Link>
-                       <NavComponent locate={links} linksArr={this.props.links} isLogin={this.state.isLogin}>
-                           {this.state.isLogin === false ? <div className={'btnBlock'}>
-                               <Btn title={'login'}/>
-                               <Btn title={'register'}/>
-                           </div> : <Account name={this.state.userName}/>}
+                       <NavComponent locate={links} linksArr={this.props.links} isLogin={isLogin}>
+                           {isLogin === false ? <div className={'btnBlock'}>
+                               <Link to={`${_.defaultRouterPosition}signin`}><Btn title={'login'}/></Link>
+                               <Link to={`${_.defaultRouterPosition}signup`}><Btn title={'register'}/></Link>
+                           </div> : <Account name={userName}/>}
                        </NavComponent>
                        <HamburgerMenu func={()=>{
                            this.navOpen(this.state.isOpen)

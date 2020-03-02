@@ -1,0 +1,92 @@
+.input
+  width: 100%
+  border-radius: 5px
+  border: 1px solid #cccccc
+  padding: 5px 10px
+  transition: border .6s linear
+  &::placeholder
+    transition: .3s linear
+  &:focus
+    border-color: #BC9CFF
+    &::placeholder
+      color: #BC9CFF
+
+
+.radio
+  display: flex
+  flex-wrap: wrap
+  padding: 10px 0
+.input--radio
+  padding: 0 10px
+.input[type="radio"]
+  opacity: 0
+//.input--radio:not(:first-of-type)
+//  margin-top: 10px
+.input--checkbox
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  margin-top: 10px
+
+.input[type="checkbox"]
+  width: auto
+  opacity: 0
+
+.label--radio
+  margin-left: 10px
+  position: relative
+.label--radio:before
+  content: ""
+  position: absolute
+  left: -25px
+  bottom: 0
+  border-radius: 50%
+  height: 18px
+  width: 18px
+  border: 1px solid #cccccc
+  transition: .3s linear
+.label--radio:after
+  content: ""
+  opacity: 0
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%)
+  position: absolute
+  left: -21px
+  bottom: 4px
+  border-radius: 50%
+  height: 10px
+  width: 10px
+  border: 1px solid #cccccc
+  transition: .3s linear
+.input[type='radio']:checked + .label--radio:before,
+.input[type='radio']:checked + .label--radio:after
+  opacity: 1
+  border-color: #BC9CFF
+.label--checkbox
+  position: relative
+  margin-left: 30px
+.label--checkbox:before
+  position: absolute
+  content: ""
+  border: 1px solid #ccc
+  border-radius: 30px
+  left: -42px
+  width: 35px
+  height: 17px
+  bottom: 0
+  transition: .4s linear
+.label--checkbox:after
+  position: absolute
+  content: ""
+  background: #cccccc
+  border: 1px solid #cccccc
+  border-radius: 30px
+  left: -39px
+  width: 13px
+  height: 13px
+  bottom: 2px
+  transition: .4s linear
+.input[type="checkbox"]:checked + .label--checkbox:before
+  border-color: #BC9CFF
+.input[type="checkbox"]:checked + .label--checkbox:after
+  background: #BC9CFF
+  left: -23px

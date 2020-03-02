@@ -72,4 +72,17 @@ const RoomReducer = (
         default: return state
     }
 }
-export default combineReducers({RoomReducer})
+
+
+const UserReducer = (state={
+    name: "none",
+    email: "none",
+    isLogin: false
+},action)=>{
+    switch (action.type) {
+        default: return state
+    }
+}
+
+
+export default combineReducers({RoomReducer,UserReducer})

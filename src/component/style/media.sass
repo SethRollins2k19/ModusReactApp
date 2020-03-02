@@ -5,7 +5,7 @@
       grid-template-columns: repeat(auto-fit,minmax(45px, 1fr)) !important
     .nav__personalAccount
       margin-left: 60px
-    .btn:not(:last-of-type)
+    .btnBlock a:not(:last-of-type)
       margin-right: 10px !important
   .home-page
     height: auto
@@ -56,12 +56,12 @@
             transition: color .6s linear
           &:hover .account__link
             font-weight: normal
-            color: white
+            color: #BC9CFF
             text-shadow: none
 
       .nav__personalAccount:hover .account__link
         font-weight: normal
-        color: white
+        color: black
       .nav__menu
         width: 100%
         margin-top: 45px
@@ -93,8 +93,6 @@
       .nav__personalAccount
         margin-top: 45px
         border-bottom: none
-      .nav__link:last-of-type
-        border-bottom: 2px solid #BC9CFF
     .hamburgerMenu
       z-index: 101
       display: block
@@ -107,6 +105,12 @@
     background: #BC9CFF !important
     color: white !important
   //btn media
+  .btnBlock
+    width: 100%
+    display: flex
+    justify-content: space-evenly
+  .header__inner .nav__personalAccount .btnBlock a:not(:last-of-type)
+    margin: 0
   .btn
     font-size: 10px
     padding: 6px 16px
@@ -178,6 +182,8 @@
   .social-icon img
     width: 15px
     height: 15px
+  .page-404__title
+    font-size: 1rem
 
 
 @media (max-width: 350px)
