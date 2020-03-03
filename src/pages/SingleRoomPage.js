@@ -215,44 +215,48 @@ export default class SingleRoomPage extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div className="payment">
-                            <div className="payment__title-Block">
-                                <p className="payment__hotel-room">№ {hotelRoom} <span className="payment__lux">{isLux? "Lux" : null}</span></p>
-                                <p className="payment__cost"><span className="payment__per-day">${costPerDay}</span> per day</p>
-                            </div>
-                            <DatePickerComponent
-                                multi={true}
-                                classNameAdd={'datepicker--room-search datepicker--single-room'}
-                                title={['Arrived', 'Shipped']}
-                                minLimit={minDate}
-                                maxLimit={maxDate}
-                                startDate={this.state.start}
-                                endDate={this.state.end}
-                                changeMinDate={date=>this.setState(prevState=>({
-                                    ...prevState,
-                                    start: date,
-                                    total: getSubstrDate(date, prevState.end),
-                                    totalPrice: getSubstrDate(date, prevState.end) * prevState.room.costPerDay
-                                }))}
-                                changeMaxDate={date=>this.setState(prevState=>({
-                                    ...prevState,
-                                    end: date,
-                                    total: getSubstrDate(prevState.start,date),
-                                    totalPrice: getSubstrDate(prevState.start,date) * prevState.room.costPerDay
-                                }))}
-                            />
-                            <SingleRoomGuestsWrapper addClassName={"payment__guests"} guests={guest}/>
-                            <div className="payment__price">
-                                <span>${costPerDay} x {this.state.total} {this.state.total === 1 ? "day" : "days"}</span>
-                                <span>${this.state.totalPrice}</span>
-                            </div>
-                            <div className="payment__total">
-                                <p>Total</p>
-                                <span className="payment__dots"></span>
-                                <p>${this.state.totalPrice}</p>
-                            </div>
-                            <div className="payment__btn">
-                                <Btn title={"reserve it up"}/>
+                        <div className="wrapper-payment">
+                            <div className="payment">
+                                <div className="payment__title-Block">
+                                    <p className="payment__hotel-room">№ {hotelRoom} <span
+                                        className="payment__lux">{isLux ? "Lux" : null}</span></p>
+                                    <p className="payment__cost"><span
+                                        className="payment__per-day">${costPerDay}</span> per day</p>
+                                </div>
+                                <DatePickerComponent
+                                    multi={true}
+                                    classNameAdd={'datepicker--room-search datepicker--single-room'}
+                                    title={['Arrived', 'Shipped']}
+                                    minLimit={minDate}
+                                    maxLimit={maxDate}
+                                    startDate={this.state.start}
+                                    endDate={this.state.end}
+                                    changeMinDate={date => this.setState(prevState => ({
+                                        ...prevState,
+                                        start: date,
+                                        total: getSubstrDate(date, prevState.end),
+                                        totalPrice: getSubstrDate(date, prevState.end) * prevState.room.costPerDay
+                                    }))}
+                                    changeMaxDate={date => this.setState(prevState => ({
+                                        ...prevState,
+                                        end: date,
+                                        total: getSubstrDate(prevState.start, date),
+                                        totalPrice: getSubstrDate(prevState.start, date) * prevState.room.costPerDay
+                                    }))}
+                                />
+                                <SingleRoomGuestsWrapper addClassName={"payment__guests"} guests={guest}/>
+                                <div className="payment__price">
+                                    <span>${costPerDay} x {this.state.total} {this.state.total === 1 ? "day" : "days"}</span>
+                                    <span>${this.state.totalPrice}</span>
+                                </div>
+                                <div className="payment__total">
+                                    <p>Total</p>
+                                    <span className="payment__dots"></span>
+                                    <p>${this.state.totalPrice}</p>
+                                </div>
+                                <div className="payment__btn">
+                                    <Btn title={"reserve it up"}/>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -286,22 +290,3 @@ function DetailsInner ({item}){
         </div>
     )
 }
-
-
-// {/*<div className="details__item">*/}
-// {/*    <img src={''} alt=""/>*/}
-// {/*    <div className="details__info">*/}
-// {/*        <h2 className="details__title">*/}
-//
-// {/*        </h2>*/}
-// {/*        <p className='details__description'>*/}
-//
-// {/*        </p>*/}
-// {/*    </div>*/}
-// {/*</div>*/}
-// SingleRoomPage.defaultProps= {
-//     details: ''
-// }
-// SingleRoomPage.PropTypes = {
-//
-// }

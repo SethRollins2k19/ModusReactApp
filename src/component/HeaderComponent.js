@@ -48,7 +48,7 @@ export default class HeaderComponent extends React.Component{
             <header className={'header'}>
                 <MainContainerComponent>
                    <div className="header__inner">
-                        <Link to={_.defaultRouterPosition}><Logo/></Link>
+                        <Logo/>
                        <NavComponent locate={links} linksArr={this.props.links} isLogin={isLogin}>
                            {isLogin === false ? <div className={'btnBlock'}>
                                <Link to={`${_.defaultRouterPosition}signin`}><Btn title={'login'}/></Link>

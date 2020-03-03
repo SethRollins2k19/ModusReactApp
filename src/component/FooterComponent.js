@@ -6,6 +6,8 @@ import enterArrow from '../assets/keyboard-backspace.svg'
 import Twitter from '../assets/twitter.svg'
 import FaceBook from '../assets/facebook.svg'
 import Instagram from '../assets/instagram.svg'
+import {_} from "../util/util";
+import {Link} from "react-router-dom";
 
 export default class FooterComponent extends React.Component{
     render() {
@@ -18,14 +20,14 @@ export default class FooterComponent extends React.Component{
                             <div className={'footer__description'}>Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.</div>
                         </FooterItem>
                         <FooterItem>
-                            <FooterList title={'Navigation'} items={['About Us','News','Support','Products']} />
+                            <FooterList title={'Navigation'} items={[<Link to={`${_.defaultRouterPosition}aboutus`}>About us</Link>,<Link to={`${_.defaultRouterPosition}news`}>News</Link>,<Link to={`${_.defaultRouterPosition}documentation`}>Support</Link>,<Link to={`${_.defaultRouterPosition}room`}>Products</Link>]} />
                         </FooterItem>
                         <FooterItem>
-                            <FooterList title={'About us'} items={['Who we are','Our team','Careers','Investors']} />
+                            <FooterList title={'About us'} items={[<Link to={`${_.defaultRouterPosition}aboutus`}>About us</Link>]} />
 
                         </FooterItem>
                         <FooterItem>
-                            <FooterList title={'Support'} items={['Documentation','Community','Get in Touch']} />
+                            <FooterList title={'Support'} items={[<Link to={`${_.defaultRouterPosition}documentation`}>Support</Link>   ]} />
                         </FooterItem>
                         <FooterItem>
                             <Subscribe />
