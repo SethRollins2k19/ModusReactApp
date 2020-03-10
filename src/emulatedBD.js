@@ -7,7 +7,7 @@ import img5 from './assets/rooms/room-5.png'
 import bedroom from './assets/rooms/room-1-bedroom.png'
 import livingRoom from './assets/rooms/room-1-livingRoom.png'
 import authorImg from './assets/reviews/face.png'
-
+import noImg from './assets/rooms/noPict.png'
 
 
 import comfort from './assets/rooms/comfort.svg'
@@ -143,7 +143,7 @@ const ROOMS = [
     },
     {
         slug: 'exclusive-room',
-        img: [null,null,null],
+        img: [noImg,noImg,noImg],
         hotelRoom: Math.floor(Math.random() * 999 + 1),
         isLux: false,
         costPerDay: Math.floor(Math.random() * 8801 + 200),
@@ -168,7 +168,7 @@ const ROOMS = [
     },
     {
         slug: 'allIn-room',
-        img: [null,null,null],
+        img: [noImg,noImg,noImg],
         hotelRoom: Math.floor(Math.random() * 999 + 1),
         isLux: true,
         costPerDay: Math.floor(Math.random() * 8801 + 200),

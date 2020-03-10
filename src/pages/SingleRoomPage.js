@@ -11,9 +11,6 @@ import Banner from "../component/UI/Banner"
 import '../component/style/singleRoomPage.sass'
 
 //dev help
-import front from '../assets/rooms/room-1.png'
-import bedroom from '../assets/rooms/room-1-bedroom.png'
-import livingRoom from '../assets/rooms/room-1-livingRoom.png'
 import MainContainerComponent from "../component/StyleContainers/MainContainer";
 import {DETAILS} from '../emulatedBD'
 import ReviewsComponent from "../component/UI/ReviewsComponent";
@@ -115,9 +112,9 @@ export default class SingleRoomPage extends React.Component{
         return (
             <div className='single-room'>
                 <header className='single-room__header'>
-                    <img src={front} alt="img" className='single-room__img single-room__main-img'/>
-                    <img src={bedroom} alt="img" className='single-room__img'/>
-                    <img src={livingRoom} alt="img" className='single-room__img'/>
+                    <img src={img[0]} alt="img" className='single-room__img single-room__main-img'/>
+                    <img src={img[1]} alt="img" className='single-room__img'/>
+                    <img src={img[2]} alt="img" className='single-room__img'/>
                 </header>
                 <MainContainerComponent>
                     <div className='single-room__inner'>

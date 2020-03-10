@@ -7,10 +7,12 @@ import {createStore,applyMiddleware} from "redux"
 import middleWareThunk from "redux-thunk"
 import {BrowserRouter as Router} from 'react-router-dom'
 import rootReducer from "./reducers/roomReducer"
+import ScrollToTop from "./ScrollToTop";
 const store = createStore(rootReducer, applyMiddleware(middleWareThunk))
 ReactDOM.render(
     <Provider store={store}>
         <Router>
+            <ScrollToTop/>
             <App />
         </Router>
     </Provider>
