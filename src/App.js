@@ -41,11 +41,11 @@ export default class App extends React.Component{
                 <HeaderComponentContainer links={['Home','About Us','Room','Careers','News','Documentation']}/>
                 <Switch>
                     <Route exact path={`${_.defaultRouterPosition}`} component={HomePage}/>
+                    <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPageContainer}/>
                     <Route exact path={`${_.defaultRouterPosition}aboutus`} component={AboutUsPage}/>
                     <Route exact path={`${_.defaultRouterPosition}careers`} component={CareersPage}/>
                     <Route exact path={`${_.defaultRouterPosition}news`} component={NewsPage}/>
                     <Route exact path={`${_.defaultRouterPosition}documentation`} component={DocumentationPage}/>
-                    <Route exact path={`${_.defaultRouterPosition}room`} component={RoomPageContainer}/>
                     <Route exact path={`${_.defaultRouterPosition}signup`} component={SingUpPage}/>
                     <Route exact path={`${_.defaultRouterPosition}signin`} component={SignInPage}/>
                     {/*<Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>*/}

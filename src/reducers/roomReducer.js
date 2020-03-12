@@ -1,11 +1,15 @@
-import {ROOMS} from "../emulatedBD";
+// import {ROOMS} from "../emulatedBD";
+import {format} from "date-fns"
+
 import {assistantFilter} from "./helpers/RoomHelper";
 import {combineReducers} from "redux";
 
 const RoomReducer = (
     state = {
-        rooms: [...ROOMS],
-        sortedRooms : [...ROOMS],
+        rooms: [],
+        isFetching: false,
+        isFetched: false,
+        sortedRooms : [],
         filter : {
             minDate: new Date(),
             maxDate: new Date(new Date().getTime() + 	84000000) ,
@@ -22,6 +26,13 @@ const RoomReducer = (
     },action
 )=>{
     switch (action.type) {
+        case "RECEIVED_ROOM":{
+            return {
+                ...state,
+                rooms: action.rooms,
+                sortedRooms: action.rooms
+            }
+        }
         case "CHANGE_MINDATE": {
             return {
                 ...state,
@@ -66,13 +77,42 @@ const RoomReducer = (
         case "FILTER": {
             return {
                 ...state,
-                sortedRooms: assistantFilter(state)
+                sortedRooms: [...assistantFilter(state)]
             }
         }
         default: return state
     }
 }
-
+const FetchReducer = (state={
+    isFetching: false,
+    isFetched: false,
+    response: false
+},action)=>{
+    switch (action.type) {
+        case "FETCHING": {
+            return {
+                ...state,
+                isFetching: true
+            }
+        }
+        case "FETCHED": {
+            return {
+                ...state,
+                isFetching: false,
+                isFetched: true,
+                response: action.res
+            }
+        }
+        case "SEND_RESPONSE": {
+            return {
+                ...state,
+                isFetched: false,
+                response: null
+            }
+        }
+        default: return state
+    }
+}
 
 const UserReducer = (state={
     name: "none",
@@ -85,4 +125,4 @@ const UserReducer = (state={
 }
 
 
-export default combineReducers({RoomReducer,UserReducer})
+export default combineReducers({RoomReducer,FetchReducer,UserReducer})

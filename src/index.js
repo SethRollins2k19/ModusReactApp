@@ -8,7 +8,9 @@ import middleWareThunk from "redux-thunk"
 import {BrowserRouter as Router} from 'react-router-dom'
 import rootReducer from "./reducers/roomReducer"
 import ScrollToTop from "./ScrollToTop";
-const store = createStore(rootReducer, applyMiddleware(middleWareThunk))
+import {fetchRooms} from "./actions/RoomActions";
+const store = createStore(rootReducer,applyMiddleware(middleWareThunk))
+store.dispatch(fetchRooms())
 ReactDOM.render(
     <Provider store={store}>
         <Router>

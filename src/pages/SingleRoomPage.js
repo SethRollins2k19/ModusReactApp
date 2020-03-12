@@ -17,7 +17,7 @@ import ReviewsComponent from "../component/UI/ReviewsComponent";
 import DatePickerComponent from "../component/UI/DatePickerComponent";
 import {SingleRoomGuestsWrapper} from "../component/UI/ComponentWrappers/SingleRoomGuestsWrapper";
 import Btn from "../component/UI/BtnComponent";
-
+import noImg from '../assets/rooms/noPict.png'
 
 const getRoom = (slug,rooms) => {
     let templateRooms = [...rooms]
@@ -77,9 +77,9 @@ export default class SingleRoomPage extends React.Component{
         room: null,
         total: getSubstrDate(this.props.currentDate.start,this.props.currentDate.end)
     }
-    componentDidMount() {
+    async componentDidMount() {
         const room = getRoom(this.props.match.params.slug, this.props.rooms)
-        this.setState(prevState=>({
+        await this.setState(prevState=>({
             ...prevState,
             room: room,
             totalPrice: prevState.total * room.costPerDay
@@ -112,9 +112,9 @@ export default class SingleRoomPage extends React.Component{
         return (
             <div className='single-room'>
                 <header className='single-room__header'>
-                    <img src={img[0]} alt="img" className='single-room__img single-room__main-img'/>
-                    <img src={img[1]} alt="img" className='single-room__img'/>
-                    <img src={img[2]} alt="img" className='single-room__img'/>
+                    <img src={img[0]?img[0]:noImg} alt="img" className='single-room__img single-room__main-img'/>
+                    <img src={img[1]?img[1]:noImg} alt="img" className='single-room__img'/>
+                    <img src={img[2]?img[2]:noImg} alt="img" className='single-room__img'/>
                 </header>
                 <MainContainerComponent>
                     <div className='single-room__inner'>
