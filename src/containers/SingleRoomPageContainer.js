@@ -14,7 +14,7 @@ const mapToStateProps = state => {
         rooms: RoomReducer.rooms
     }
 }
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = ()=>dispatch => {
     return {
         fetchRooms: ()=>dispatch(fetchRooms())
     }

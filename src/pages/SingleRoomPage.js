@@ -3,7 +3,6 @@ import React from "react"
 // import PropTypes from '../../node_modules/prop-types'
 
 
-
 //react component
 import Banner from "../component/UI/Banner"
 
@@ -74,25 +73,19 @@ export default class SingleRoomPage extends React.Component{
     state = {
         start: this.props.currentDate.start,
         end: this.props.currentDate.end,
-        room: null,
-        total: getSubstrDate(this.props.currentDate.start,this.props.currentDate.end)
-    }
-    async componentDidMount() {
-        const room = getRoom(this.props.match.params.slug, this.props.rooms)
-        await this.setState(prevState=>({
-            ...prevState,
-            room: room,
-            totalPrice: prevState.total * room.costPerDay
-        }))
+        total: getSubstrDate(this.props.currentDate.start,this.props.currentDate.end),
     }
 
     render() {
-        const room = this.state.room
-        if(!room){
+
+        const rooms = this.props.rooms
+        if(rooms.length === 0){
             return (
                 <Banner title="no such page" subtitle="Somewhen here will be room, but no now"/>
             )
         }
+        const room = getRoom(this.props.match.params.slug, this.props.rooms)
+
         const { img,guests, hotelRoom, minDate, maxDate,isLux, costPerDay, reviews, details, rules, refund} = room
 
         let guest = {
@@ -232,24 +225,24 @@ export default class SingleRoomPage extends React.Component{
                                         ...prevState,
                                         start: date,
                                         total: getSubstrDate(date, prevState.end),
-                                        totalPrice: getSubstrDate(date, prevState.end) * prevState.room.costPerDay
+                                        totalPrice: getSubstrDate(date, prevState.end) * costPerDay
                                     }))}
                                     changeMaxDate={date => this.setState(prevState => ({
                                         ...prevState,
                                         end: date,
                                         total: getSubstrDate(prevState.start, date),
-                                        totalPrice: getSubstrDate(prevState.start, date) * prevState.room.costPerDay
+                                        totalPrice: getSubstrDate(prevState.start, date) * costPerDay
                                     }))}
                                 />
                                 <SingleRoomGuestsWrapper addClassName={"payment__guests"} guests={guest}/>
                                 <div className="payment__price">
                                     <span>${costPerDay} x {this.state.total} {this.state.total === 1 ? "day" : "days"}</span>
-                                    <span>${this.state.totalPrice}</span>
+                                    <span>${this.state.total * costPerDay}</span>
                                 </div>
                                 <div className="payment__total">
                                     <p>Total</p>
                                     <span className="payment__dots"></span>
-                                    <p>${this.state.totalPrice}</p>
+                                    <p>${this.state.total * costPerDay}</p>
                                 </div>
                                 <div className="payment__btn">
                                     <Btn title={"reserve it up"}/>
