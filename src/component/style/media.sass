@@ -83,8 +83,19 @@
         display: flex
         justify-content: center
         align-items: center
+    .logout
+      z-index: 10000
+      position: absolute
+      right: 30px
+      top: 17px
+      opacity: 0
+      transition: opacity .1s linear
     .nav--opened
       right: 0
+      & + .logout
+        transition: opacity 1s  cubic-bezier(0.6, -0.28, 0.735, 0.045)
+        opacity: 1
+
     .nav--logined
       flex-direction: column-reverse
       justify-content: flex-end
@@ -97,7 +108,7 @@
       z-index: 101
       display: block
       position: fixed
-      right: 0
+      right: 10px
       top: 17px
     .hamburgerMenu__inner
       display: flex
@@ -170,6 +181,8 @@
 @media (max-width: 600px)
   .footer__inner
     grid-template-columns: 2fr repeat(3,1fr)
+  .footer__link a
+    font-size: 15px
   .single-room__description
     display: flex
     flex-direction: column
@@ -184,6 +197,9 @@
     height: 15px
   .page-404__title
     font-size: 1rem
+  .loading
+    width: 80px
+    height: 80px
 
 
 @media (max-width: 350px)
@@ -192,10 +208,12 @@
   .footer__description:not(:first-of-type)
     font-size: 8px
     line-height: 14px
-  .footer__link
-    font-size: 8px
+  .footer__link a
+    font-size: 12px
     margin-top: 2px
-
+  .loading
+    width: 60px
+    height: 60px
 @media (max-height: 320px)
   .nav--opened
     overflow: scroll

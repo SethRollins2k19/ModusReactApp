@@ -20,11 +20,11 @@ import HeaderComponentContainer from "./containers/HeaderComponentContainer";
 //--footer
 import FooterComponent from "./component/FooterComponent";
 
-
 //media style
 import './component/style/media.sass'
 //assistant unit
 import {_} from "./util/util";
+
 
 
 

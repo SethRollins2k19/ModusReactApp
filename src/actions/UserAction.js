@@ -7,9 +7,9 @@ export const getLogin = (email,password) => dispatch =>{
     axios.post('http://localhost:9000/getLogin',{email,password})
         .then(res => {
             console.log(res)
-            res.data ? dispatch({
+            res.data.length !== 0 ? dispatch({
                     type: "GET_LOGIN",
-                    user: res.data
+                    user: res.data[0]
                 })
                 :
                 dispatch({
@@ -18,4 +18,9 @@ export const getLogin = (email,password) => dispatch =>{
                 })
             console.error()
         })
+}
+export const logOut = ()=> dispatch => {
+    dispatch({
+        type: "LOGOUT"
+    })
 }

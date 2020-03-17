@@ -27,7 +27,7 @@ export const AccountPage = ({User={name: "Denis",surname: "Freaking",email: "sho
     const {name,surname,email,orders,isLogin,avatar} = User
     const ordersInfo = []
     if(!isLogin){
-        getLogin("tsum@tsum.ru","1001")
+        // getLogin("tsum@tsum.ru","1001")
         return <Banner title="account not found" style={{display:"flex",flexDirection:"column",justifyContent:"space-around",minHeight:120 + "px"}}>
             <Link to={`${_.defaultRouterPosition}signin`}><Btn title='Please login in again'/></Link>
             <Link to={`${_.defaultRouterPosition}signup`}><Btn title='Register new account now'/></Link>

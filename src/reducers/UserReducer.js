@@ -1,6 +1,6 @@
 const UserReducer = (state={
-    name: "",
-    surname: "",
+    name: "123@mail.ru",
+    surname: "1234",
     email: "",
     orders: [],
     avatar: "",
@@ -19,6 +19,17 @@ const UserReducer = (state={
             return {
                 ...state,
                 error: action.error
+            }
+        }
+        case "LOGOUT": {
+            return {
+                name: "",
+                surname: "",
+                email: "",
+                orders: [],
+                avatar: "",
+                isLogin: false,
+                error: ''
             }
         }
         default: return state

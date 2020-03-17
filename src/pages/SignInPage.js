@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import { useHistory } from "react-router-dom"
 import MainContainerComponent from "../component/StyleContainers/MainContainer";
 import FormWrapper from "../component/StyleContainers/FormContainer";
 import '../component/style/signStyle.sass'
@@ -6,18 +7,21 @@ import {InputForm} from "../component/UI/FormUI";
 import Btn from "../component/UI/BtnComponent";
 import {Link} from "react-router-dom";
 import {_} from "../util/util";
+import AccountPageContainer from "../containers/AccountPageContainer";
 
 
 export const SignInPage = ({getLogin,error,isLogin})=>{
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
-    console.log(getLogin)
-    if(isLogin){
-        setTimeout(()=>{
-            window.location.pathname = "/account"
-        },500)
+    let history = useHistory();
+    // console.log(getLogin)
+    if(isLogin) {
+        setTimeout(() => {
+            history.push('/account')
+        }, 500)
     }
     return(
+
         <div className="Sign SignIp">
             <MainContainerComponent>
                 <div className="SignIn__inner">

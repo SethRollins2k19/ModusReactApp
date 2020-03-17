@@ -1,8 +1,9 @@
 import React from "react"
 import MainContainerComponent from "../component/StyleContainers/MainContainer";
 import MiniRoomComponent from "../component/UI/MiniRoomComponent";
-import Banner from "../component/UI/Banner";
+// import Banner from "../component/UI/Banner";
 import UseFilterContainer from "../containers/UseFilterContainer";
+import {Loading} from "../component/Loading";
 
 
 export const RoomPage =  ({sortedRooms}) => {
@@ -18,8 +19,7 @@ export const RoomPage =  ({sortedRooms}) => {
             <MainContainerComponent>
                 <div className="room-page__inner">
                     <UseFilterContainer/>
-                    {!sortedRooms.length ? <Banner title="No rooms with such filter"
-                                             subtitle="change setting of filter to view more rooms"/> :
+                    {!sortedRooms.length ? <Loading/> :
                         <div className="room-page__rooms">
                             {sortedRooms.map((room, index) => {
                                 return <MiniRoomComponent

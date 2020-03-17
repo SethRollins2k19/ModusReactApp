@@ -53,11 +53,16 @@ export default class HeaderComponent extends React.Component{
                            {isLogin === false ? <div className={'btnBlock'}>
                                <Link to={`${_.defaultRouterPosition}signin`}><Btn title={'login'}/></Link>
                                <Link to={`${_.defaultRouterPosition}signup`}><Btn title={'register'}/></Link>
-                           </div> : <Account name={userName}/>}
+                           </div> : <Account name={userName}>
+                           </Account>}
                        </NavComponent>
+                       {isLogin?<Btn title="log out" className="logout" btnEvent={this.props.logOut}/>:""}
+                       {/*{isLogin?<Btn title="log out" btnEvent={this.props.logOut}/>:""}*/}
                        <HamburgerMenu func={()=>{
                            this.navOpen(this.state.isOpen)
                        }}/>
+
+
                    </div>
                 </MainContainerComponent>
             </header>
