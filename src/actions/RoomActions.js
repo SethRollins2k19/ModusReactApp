@@ -1,17 +1,15 @@
 import axios from 'axios'
-import {parseISO} from 'date-fns'
 export const fetchRooms =  () => dispatch => {
 
     axios.get('http://localhost:9000/RoomFetch2')
         .then( res => {
-
             dispatch({
             type: "RECEIVED_ROOM",
             rooms: res.data.map(item=>{
                 return {
                     ...item,
-                    minDate: parseISO(item.minDate),
-                    maxDate: parseISO(item.maxDate)
+                    minDate: new Date(item.minDate),
+                    maxDate: new Date(item.maxDate)
                 }
             })
         })

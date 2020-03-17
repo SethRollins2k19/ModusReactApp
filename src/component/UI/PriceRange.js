@@ -15,7 +15,7 @@ export default class PriceRange extends React.Component{
             connect: true,
             range: {
                 'min': 0,
-                'max': maxPrice
+                'max': 9999
             }
         }).on('set.one', (e)=>{
             this.props.changePrice(e)

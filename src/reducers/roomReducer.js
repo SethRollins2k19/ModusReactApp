@@ -1,7 +1,4 @@
-// import {ROOMS} from "../emulatedBD";
-
 import {assistantFilter} from "./helpers/RoomHelper";
-import {combineReducers} from "redux";
 
 const RoomReducer = (
     state = {
@@ -113,15 +110,7 @@ const FetchReducer = (state={
     }
 }
 
-const UserReducer = (state={
-    name: "none",
-    email: "none",
-    isLogin: false
-},action)=>{
-    switch (action.type) {
-        default: return state
-    }
-}
 
 
-export default combineReducers({RoomReducer,FetchReducer,UserReducer})
+
+export {RoomReducer,FetchReducer}

@@ -8,15 +8,26 @@ import {Link} from "react-router-dom";
 import {_} from "../util/util";
 
 
-export const SignInPage = ()=>{
+export const SignInPage = ({getLogin,error,isLogin})=>{
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
+    console.log(getLogin)
+    if(isLogin){
+        setTimeout(()=>{
+            window.location.pathname = "/account"
+        },500)
+    }
     return(
         <div className="Sign SignIp">
             <MainContainerComponent>
                 <div className="SignIn__inner">
                     <FormWrapper title="Logging in">
-                        <form className="SignIn__form" action="">
+                        <form className="SignIn__form" onSubmit={async (e)=>{
+                            e.preventDefault()
+                            getLogin(email,password)
+                            setEmail("")
+                            setPassword("")
+                        }}>
                            <InputForm type="email"
                                       placeHolder="Email"
                                       hookSet={{
@@ -31,6 +42,12 @@ export const SignInPage = ()=>{
                                           setHook: setPassword
                                       }}
                            />
+                            {error&&email.length === 0 && password.length === 0 && !isLogin?<div className="error">
+                                {error}
+                            </div> : ""}
+                            {isLogin?<div className="success">
+                                Access successful
+                            </div>:""}
                             <div className="SignIn__submit">
                                 <Btn title={"Sign in"}/>
                             </div>

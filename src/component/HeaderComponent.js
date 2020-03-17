@@ -102,7 +102,7 @@ function HamburgerMenu (props) {
 function Account(props){
     return(
         <div className={'account'}>
-            <a href={'#account'} className={'account__link'}>{props.name}</a>
+            <Link to={`${_.defaultRouterPosition}account`} className={'account__link'}>{props.name}</Link>
         </div>
     )
 }
