@@ -3,12 +3,11 @@
 .header__inner
   padding: 10px 0
   display: grid
-  grid-template-columns: 1fr 5fr
+  grid-template-columns: 2fr 10fr 1fr
   align-items: center
   .nav
-    margin-top: -10px
     display: grid
-    grid-template-columns: 3fr 2fr
+    grid-template-columns: 3fr 1fr
     align-items: center
     padding-left: 40px
     justify-content: space-evenly
@@ -32,11 +31,11 @@
       //text-shadow: 0px 0px 1.3px rgba(31, 32, 65, 1)
   .nav__personalAccount
     display: flex
-    justify-content: space-evenly
+    justify-content: space-around
 
     .account
       max-width: 200px
-      padding: 10px 40px
+      padding: 10px 20px
       text-align: center
       transition: background-color .6s linear
       border-left: 2px solid #cccccc
@@ -49,8 +48,13 @@
       font-weight: bold
       text-shadow: 0 0 .65px black
       color: black
-    .btnBlock a:not(:last-of-type)
-      margin-right: 35px
+    .btnBlock
+      width: 100%
+      display: flex
+      justify-content: space-around
+  .btn
+    padding: 6px 15px
+    font-size: 11px
   .hamburgerMenu
     z-index: 10
     padding: 10px
@@ -78,3 +82,5 @@
       position: absolute
       left: 0
       bottom: -8px
+  .logout
+    padding: 6px 5px

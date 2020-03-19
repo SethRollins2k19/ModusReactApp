@@ -14,7 +14,8 @@ import DocumentationPage from "./pages/DocumentationPage";
 import SingleRoomPageContainer from "./containers/SingleRoomPageContainer";
 import AccountPageContainer from "./containers/AccountPageContainer";
 import SignInPageContainer from "./containers/SignInPageContainer";
-import {SingUpPage} from "./pages/SignUpPage";
+import SignUpPageContainer from "./containers/SignUpPageContainer";
+
 //--header
 import HeaderComponentContainer from "./containers/HeaderComponentContainer";
 //--footer
@@ -42,7 +43,7 @@ export default class App extends React.Component{
                     <Route exact path={`${_.defaultRouterPosition}careers`} component={CareersPage}/>
                     <Route exact path={`${_.defaultRouterPosition}news`} component={NewsPage}/>
                     <Route exact path={`${_.defaultRouterPosition}documentation`} component={DocumentationPage}/>
-                    <Route exact path={`${_.defaultRouterPosition}signup`} component={SingUpPage}/>
+                    <Route exact path={`${_.defaultRouterPosition}signup`} component={SignUpPageContainer}/>
                     <Route exact path={`${_.defaultRouterPosition}signin`} component={SignInPageContainer}/>
                     <Route exact path={`${_.defaultRouterPosition}account`} component={AccountPageContainer}/>
                     {/*<Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>*/}

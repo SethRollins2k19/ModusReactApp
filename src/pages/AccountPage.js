@@ -42,7 +42,7 @@ export const AccountPage = ({User={name: "Denis",surname: "Freaking",email: "sho
                     </header>
                     <main>
                         <div className="account-page__info">
-                            <img src={avatar} alt={`avatar of ${name}`} className="account-page__avatar"/>
+                            <img src={avatar? avatar : noAvatar} alt={`avatar of ${name}`} className="account-page__avatar"/>
                             <div className="account-page__personal">
                                 <p><span>Email:</span>{email}</p>
                                 <p><span>Name:</span>{name}</p>

@@ -1,33 +1,42 @@
 const UserReducer = (state={
-    name: "123@mail.ru",
-    surname: "1234",
-    email: "",
+    name: '',
+    surname: '',
+    email: '',
     orders: [],
-    avatar: "",
+    avatar: '',
     isLogin: false,
-    error: ''
+    error: '',
+    isCreated: false
 },action)=>{
     switch (action.type) {
         case "GET_LOGIN":{
             return {
                 ...state,
                 isLogin: true,
+                error: "",
                 ...action.user
             }
         }
-        case "ERROR_LOGIN": {
+        case "ERROR": {
             return {
                 ...state,
                 error: action.error
             }
         }
+        case "REGISTERED": {
+            return {
+                ...state,
+                error: "",
+                isCreated: true,
+            }
+        }
         case "LOGOUT": {
             return {
-                name: "",
-                surname: "",
-                email: "",
+                name: '',
+                surname: '',
+                email: '',
                 orders: [],
-                avatar: "",
+                avatar: '',
                 isLogin: false,
                 error: ''
             }
