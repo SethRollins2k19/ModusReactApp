@@ -1,8 +1,9 @@
 const UserReducer = (state={
+    _id: "",
     name: '',
     surname: '',
     email: '',
-    orders: [],
+    orders: '',
     avatar: '',
     isLogin: false,
     error: '',
@@ -39,6 +40,12 @@ const UserReducer = (state={
                 avatar: '',
                 isLogin: false,
                 error: ''
+            }
+        }
+        case "ADD_ORDER": {
+            return {
+                ...state,
+                orders: [...state.orders,action.order]
             }
         }
         default: return state

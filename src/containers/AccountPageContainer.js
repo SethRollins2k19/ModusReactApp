@@ -4,9 +4,9 @@ import {getLogin} from "../actions/UserAction";
 
 
 const mapStateToProps = state => {
-    const {UserReducer} = state
+    const {User} = state
     return {
-        User: {...UserReducer}
+        User: {...User}
     }
 }
 const mapDispatchToProps = dispatch =>{

@@ -12,8 +12,8 @@ import {_} from "../util/util";
 export const SingUpPage = ({createAccount,isCreated,error}) => {
     const [name, setName] = useState("")
     const [surname, setSurname] = useState("")
-    const [email, setEmail] = useState("tsu@mail.ru")
-    const [password, setPassword] = useState("1234")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     const [sex, setSex] = useState("Male")
     const [birthday, setBirthday] = useState(new Date())
     const [promo, setPromo] = useState(false)
@@ -31,7 +31,7 @@ export const SingUpPage = ({createAccount,isCreated,error}) => {
                     <FormWrapper title="Registration of account">
                         <form className="SignUp__form" onSubmit={e=>{
                             e.preventDefault()
-                            let user = {name,surname,email,password,sex,birthday,promo}
+                            let user = {name,surname,email: email.toLowerCase(),password,sex,birthday,promo}
                             createAccount(user)
                             setName("")
                             setSurname("")

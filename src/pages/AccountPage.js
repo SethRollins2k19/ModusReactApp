@@ -12,20 +12,19 @@ import Btn from "../component/UI/BtnComponent";
 import {Link} from "react-router-dom";
 import {_} from "../util/util";
 
-const toNormalDate = (date) => {
-    let day,month,year
-    day = date.getDate()
-    month = date.getMonth() + 1
-    year = date.getFullYear()
-    day = day >= 10 ? day : "0" + day.toString()
-    month = month >= 10 ? month : "0" + (month)
-    return `${month}/${day}/${year}`
-}
+// const toNormalDate = (date) => {
+//     let day,month,year
+//     day = date.getDate()
+//     month = date.getMonth() + 1
+//     year = date.getFullYear()
+//     day = day >= 10 ? day : "0" + day.toString()
+//     month = month >= 10 ? month : "0" + (month)
+//     return `${month}/${day}/${year}`
+// }
 
 
-export const AccountPage = ({User={name: "Denis",surname: "Freaking",email: "shots@shots.shots",orders:[0,12,33],avatar:noAvatar,isLogin: false},getLogin}) =>{
+export const AccountPage = ({User={name: "",surname: "",email: "",orders:[],avatar:noAvatar,isLogin: false}}) =>{
     const {name,surname,email,orders,isLogin,avatar} = User
-    const ordersInfo = []
     if(!isLogin){
         // getLogin("tsum@tsum.ru","1001")
         return <Banner title="account not found" style={{display:"flex",flexDirection:"column",justifyContent:"space-around",minHeight:120 + "px"}}>
@@ -55,16 +54,18 @@ export const AccountPage = ({User={name: "Denis",surname: "Freaking",email: "sho
                                 <p>Room</p>
                                 <p>Arrived</p>
                                 <p>Shipped</p>
+                                <p>Status</p>
                             </div>
-                            {ordersInfo.length === 0 ?
+                            {orders.length === 0 ?
                                 <Banner title="No orders" subtitle="All ordered room will represent here"/>
-                                :ordersInfo.map((item,index) => {
+                                :orders.map((item,index) => {
                                 return (
                                     <div key={index} className="account-page__order">
-                                        <p>{item.order}</p>
+                                        <p>{index + 1}</p>
                                         <p>{item.roomName}</p>
-                                        <p>{toNormalDate(item.date.startDate)}</p>
-                                        <p>{toNormalDate(item.date.endDate)}</p>
+                                        <p>{(item.arrived)}</p>
+                                        <p>{(item.shipped)}</p>
+                                        <p>{(item.status)}</p>
                                     </div>
                             )
                             })}

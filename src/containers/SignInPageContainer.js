@@ -3,10 +3,10 @@ import {getLogin} from "../actions/UserAction";
 import {SignInPage} from "../pages/SignInPage";
 
 const mapStateToProps = state => {
-    const {UserReducer} = state
+    const {User} = state
     return {
-        error: UserReducer.error,
-        isLogin: UserReducer.isLogin
+        error: User.error,
+        isLogin: User.isLogin
     }
 }
 

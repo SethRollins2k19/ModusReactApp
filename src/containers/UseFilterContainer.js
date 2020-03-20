@@ -9,8 +9,8 @@ import {
 
 
 const mapStateToProps = state => {
-    const {RoomReducer} = state
-    const {minDate,maxDate,guests,minPrice,maxPrice} = RoomReducer.filter
+    const {Rooms} = state
+    const {minDate,maxDate,guests,minPrice,maxPrice} = Rooms.filter
     return {
         minDate,
         maxDate,

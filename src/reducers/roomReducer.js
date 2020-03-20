@@ -79,38 +79,6 @@ const RoomReducer = (
         default: return state
     }
 }
-const FetchReducer = (state={
-    isFetching: false,
-    isFetched: false,
-    response: false
-},action)=>{
-    switch (action.type) {
-        case "FETCHING": {
-            return {
-                ...state,
-                isFetching: true
-            }
-        }
-        case "FETCHED": {
-            return {
-                ...state,
-                isFetching: false,
-                isFetched: true,
-                response: action.res
-            }
-        }
-        case "SEND_RESPONSE": {
-            return {
-                ...state,
-                isFetched: false,
-                response: null
-            }
-        }
-        default: return state
-    }
-}
 
 
-
-
-export {RoomReducer,FetchReducer}
+export {RoomReducer}

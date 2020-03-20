@@ -4,11 +4,11 @@ import {fetchRooms, filter} from "../actions/RoomActions";
 
 
 const mapToStateProps = state => {
-    const {RoomReducer} = state
+    const {Rooms} = state
     return {
-        isFetching: RoomReducer.isFetching,
-        rooms: RoomReducer.rooms,
-        sortedRooms: RoomReducer.sortedRooms
+        isFetching: Rooms.isFetching,
+        rooms: Rooms.rooms,
+        sortedRooms: Rooms.sortedRooms
     }
 }
 const mapDispatchToProps = dispatch => {

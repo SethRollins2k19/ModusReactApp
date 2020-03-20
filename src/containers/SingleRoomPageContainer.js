@@ -1,22 +1,31 @@
 import {connect} from "react-redux"
 import SingleRoomPage from "../pages/SingleRoomPage";
 import {fetchRooms} from "../actions/RoomActions";
+import {addOrders} from "../actions/UserAction";
 
 
 
 const mapToStateProps = state => {
-    const {RoomReducer} = state
+    const {Rooms,User} = state
     return {
         currentDate: {
-            start: RoomReducer.filter.minDate,
-            end: RoomReducer.filter.maxDate
+            start: Rooms.filter.minDate,
+            end: Rooms.filter.maxDate
         },
-        rooms: RoomReducer.rooms
+        isLogin: User.isLogin,
+        id: User._id,
+        error: User.error,
+        rooms: Rooms.rooms
     }
 }
 const mapDispatchToProps = ()=>dispatch => {
     return {
-        fetchRooms: ()=>dispatch(fetchRooms())
+        addOrders: (order) => dispatch(addOrders(order)),
+        fetchRooms: ()=>dispatch(fetchRooms()),
+        clearError: ()=>dispatch({
+            type: "ERROR",
+            error: ""
+        })
     }
 }
 

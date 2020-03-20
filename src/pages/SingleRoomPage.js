@@ -75,10 +75,16 @@ export default class SingleRoomPage extends React.Component{
         end: this.props.currentDate.end,
         total: getSubstrDate(this.props.currentDate.start,this.props.currentDate.end),
     }
+    componentWillUnmount() {
+        this.props.clearError()
+    }
 
     render() {
-
+        const id = this.props.id
         const rooms = this.props.rooms
+        const isLogin = this.props.isLogin
+        const addOrders = this.props.addOrders
+        const error = this.props.error
         if(rooms.length === 0){
             return (
                 <Banner title="no such page" subtitle="Somewhen here will be room, but no now"/>
@@ -244,9 +250,23 @@ export default class SingleRoomPage extends React.Component{
                                     <span className="payment__dots"></span>
                                     <p>${this.state.total * costPerDay}</p>
                                 </div>
-                                <div className="payment__btn">
-                                    <Btn title={"reserve it up"}/>
-                                </div>
+                                {!isLogin || error !== "" ? <div className="error">
+                                        {error === ""? "To reserve room need to be logined": error}
+                                    </div> :
+                                    <div className="payment__btn">
+                                        <Btn title={"reserve it up"} btnEvent={() => {
+                                            addOrders({
+                                                key: id,
+                                                room: hotelRoom,
+                                                roomName: room.slug,
+                                                arrived: this.state.start,
+                                                shipped: this.state.end,
+                                                status: "reserved",
+                                                totalPrice: (this.state.total * costPerDay)
+                                            })
+                                        }}/>
+                                    </div>
+                                }
                             </div>
                         </div>
                     </div>

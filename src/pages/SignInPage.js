@@ -7,7 +7,6 @@ import {InputForm} from "../component/UI/FormUI";
 import Btn from "../component/UI/BtnComponent";
 import {Link} from "react-router-dom";
 import {_} from "../util/util";
-import AccountPageContainer from "../containers/AccountPageContainer";
 
 
 export const SignInPage = ({getLogin,error,isLogin})=>{
@@ -28,7 +27,7 @@ export const SignInPage = ({getLogin,error,isLogin})=>{
                     <FormWrapper title="Logging in">
                         <form className="SignIn__form" onSubmit={async (e)=>{
                             e.preventDefault()
-                            getLogin(email,password)
+                            getLogin(email.toLowerCase(),password)
                             setEmail("")
                             setPassword("")
                         }}>

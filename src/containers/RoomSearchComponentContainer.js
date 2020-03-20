@@ -4,8 +4,8 @@ import {changeGuests, changeMaxDate, changeMinDate} from "../actions/RoomActions
 import RoomSearchComponent from "../component/UI/RoomSearchComponent";
 
 const mapStateToProps = state => {
-    const {RoomReducer} = state
-    const {minDate,maxDate,guests} = RoomReducer.filter
+    const {Rooms} = state
+    const {minDate,maxDate,guests} = Rooms.filter
     return {
         minDate,
         maxDate,

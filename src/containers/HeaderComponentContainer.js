@@ -4,10 +4,10 @@ import {logOut} from "../actions/UserAction";
 
 
 const mapToStateProps = state => {
-    const {UserReducer} = state
+    const {User} = state
     return {
-        isLogin: UserReducer.isLogin,
-        userName: UserReducer.name
+        isLogin: User.isLogin,
+        userName: User.name
     }
 }
 

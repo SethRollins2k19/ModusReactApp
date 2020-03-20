@@ -1,4 +1,5 @@
 import axios from 'axios'
+import {_} from "../util/util";
 
 
 export const getLogin = (email,password) => dispatch =>{
@@ -6,13 +7,33 @@ export const getLogin = (email,password) => dispatch =>{
         .then(res => {
             res.data.length !== 0 ? dispatch({
                     type: "GET_LOGIN",
-                    user: res.data[0]
+                    user: res.data
                 })
                 :
                 dispatch({
                     type: "ERROR",
                     error: "Incorrect login or password"
                 })
+        })
+}
+export const addOrders = (order) => dispatch => {
+    axios.post('http://localhost:9000/orderRoom', {...order})
+        .then(res => {
+            console.log(res.data)
+            res.data === "" ?
+                dispatch({
+                    type: "ADD_ORDER",
+                    order: {
+                        ...order,
+                        shipped: _.toNormalDate(order.shipped),
+                        arrived: _.toNormalDate(order.shipped)
+                    }
+                }) :
+                dispatch({
+                    type: "ERROR",
+                    error: res.data.toString()
+                })
+
         })
 }
 export const createAccount = (user) => dispatch => {

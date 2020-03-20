@@ -32,6 +32,15 @@ export const _ = {
         }
         return date[lang]
      },
+    toNormalDate : (date) => {
+        let day,month,year
+        day = date.getDate()
+        month = date.getMonth() + 1
+        year = date.getFullYear()
+        day = day >= 10 ? day : "0" + day.toString()
+        month = month >= 10 ? month : "0" + (month)
+        return `${month}/${day}/${year}`
+    },
     // defaultRouterPosition : '/ModusReactApp/',
     defaultRouterPosition : '/'
 }

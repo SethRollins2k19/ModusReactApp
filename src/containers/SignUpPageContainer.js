@@ -3,10 +3,10 @@ import {createAccount} from "../actions/UserAction";
 import {SingUpPage} from "../pages/SignUpPage";
 
 const mapStateToProps = state => {
-    const {UserReducer} = state
+    const {User} = state
     return {
-        error: UserReducer.error,
-        isCreated: UserReducer.isCreated
+        error: User.error,
+        isCreated: User.isCreated
     }
 }
 const mapDispatchToProps = dispatch => {
