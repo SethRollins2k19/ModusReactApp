@@ -25,6 +25,8 @@ import FooterComponent from "./component/FooterComponent";
 import './component/style/media.sass'
 //assistant unit
 import {_} from "./util/util";
+import {CRMaccessPage} from "./pages/CRMaccessPage";
+import {OnlineChat} from "./CRM/OnlineChat/OnlineChat";
 
 
 
@@ -48,9 +50,10 @@ export default class App extends React.Component{
                     <Route exact path={`${_.defaultRouterPosition}account`} component={AccountPageContainer}/>
                     {/*<Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPage}/>*/}
                     <Route exact path={`${_.defaultRouterPosition}room/:slug`} component={SingleRoomPageContainer}/>
+                    <Route exact path={`${_.defaultRouterPosition}CRM`} component={CRMaccessPage}/>
                     <Route component={Page404}/>
-
                 </Switch>
+                <OnlineChat/>
                 <FooterComponent/>
             </>
         )

@@ -1,0 +1,11 @@
+.statistics{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+.statisticsItem{
+    min-width: 150px;
+    width: 25%;
+
+}

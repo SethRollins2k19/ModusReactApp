@@ -5,9 +5,11 @@ const UserReducer = (state={
     email: '',
     orders: '',
     avatar: '',
-    isLogin: false,
+    isLogin: true,
     error: '',
-    isCreated: false
+    isManager: false,
+    isCreated: false,
+    role: "admin"
 },action)=>{
     switch (action.type) {
         case "GET_LOGIN":{

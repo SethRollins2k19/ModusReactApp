@@ -23,10 +23,9 @@ import {_} from "../util/util";
 // }
 
 
-export const AccountPage = ({User={name: "",surname: "",email: "",orders:[],avatar:noAvatar,isLogin: false}}) =>{
-    const {name,surname,email,orders,isLogin,avatar} = User
+const AccountPage = ({User={name: "",surname: "",email: "",orders:[],avatar:noAvatar,isLogin: false, role : "user"}}) =>{
+    const {name,surname,email,orders,isLogin,avatar,role} = User
     if(!isLogin){
-        // getLogin("tsum@tsum.ru","1001")
         return <Banner title="account not found" style={{display:"flex",flexDirection:"column",justifyContent:"space-around",minHeight:120 + "px"}}>
             <Link to={`${_.defaultRouterPosition}signin`}><Btn title='Please login in again'/></Link>
             <Link to={`${_.defaultRouterPosition}signup`}><Btn title='Register new account now'/></Link>
@@ -48,31 +47,50 @@ export const AccountPage = ({User={name: "",surname: "",email: "",orders:[],avat
                                 <p><span>Surname:</span>{surname}</p>
                             </div>
                         </div>
-                        <div className="account-page__orders">
-                            <div className="account-page__order">
-                                <p>Order №</p>
-                                <p>Room</p>
-                                <p>Arrived</p>
-                                <p>Shipped</p>
-                                <p>Status</p>
+                        {role.toLowerCase()==="admin"?
+                            <div className="admin-button">
+                                <Link to={`${_.defaultRouterPosition}CRM`}>
+                                <Btn title="CRM"/>
+                                </Link>
                             </div>
-                            {orders.length === 0 ?
-                                <Banner title="No orders" subtitle="All ordered room will represent here"/>
-                                :orders.map((item,index) => {
-                                return (
-                                    <div key={index} className="account-page__order">
-                                        <p>{index + 1}</p>
-                                        <p>{item.roomName}</p>
-                                        <p>{(item.arrived)}</p>
-                                        <p>{(item.shipped)}</p>
-                                        <p>{(item.status)}</p>
-                                    </div>
-                            )
-                            })}
-                        </div>
+                            :
+                            <OrderList orders={orders}/>
+                        }
                     </main>
                 </div>
             </MainContainerComponent>
         </div>
     )
+}
+
+
+function OrderList ({orders = []}){
+    return (
+        <div className="account-page__orders">
+            <div className="account-page__order">
+                <p>Order №</p>
+                <p>Room</p>
+                <p>Arrived</p>
+                <p>Shipped</p>
+                <p>Status</p>
+            </div>
+            {orders.length === 0 ?
+                <Banner title="No orders" subtitle="All ordered room will represent here"/>
+                : orders.map((item, index) => {
+                    return (
+                        <div key={index} className="account-page__order">
+                            <p>{index + 1}</p>
+                            <p>{item.roomName}</p>
+                            <p>{(item.arrived)}</p>
+                            <p>{(item.shipped)}</p>
+                            <p>{(item.status)}</p>
+                        </div>
+                    )
+                })}
+        </div>
+    )
+}
+export {
+    AccountPage,
+    OrderList
 }

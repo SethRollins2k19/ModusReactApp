@@ -1,0 +1,15 @@
+.OnlineChat{
+    position: fixed;
+    width: 200px;
+    height: 15px;
+    border-radius: 15px 0 0 0 ;
+    background: #8ba4f9;
+    bottom: 0;
+    right: 0;
+}
+.OnlineChatActive{
+
+}
+.OnlineChatPulsing{
+
+}

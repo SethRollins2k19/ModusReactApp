@@ -8,11 +8,6 @@ import {Loading} from "../component/Loading";
 
 export const RoomPage =  ({sortedRooms}) => {
 
-    // if(!isFetching){
-    //     console.log(rooms)
-    //     console.log(sortedRooms)
-    //     fetchRooms()
-    // }
     return (
 
         <div className="room-page">
